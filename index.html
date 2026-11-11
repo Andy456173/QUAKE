@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>QUAKE | Earthquake Awareness in Myanmar</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js"></script>
+    <link href="site-shell.css" rel="stylesheet"/>
+    <link href="Fav.png" rel="icon" type="image/png"/>
+    <script defer="" src="site-shell.js"></script>
+  </head>
+  <body data-page="index.html">
+    <aside aria-label="Christmas and New Year announcement" aria-live="polite" class="development-notice" id="developmentNotice" role="status">
+      <div aria-hidden="true" class="development-notice__snow" id="noticeSnow"></div>
+      <div class="container site-container development-notice__content">
+        <span aria-hidden="true" class="development-notice__icon">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+            <path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 5.5 12 8l2.5-2.5M9.5 18.5 12 16l2.5 2.5"></path>
+          </svg>
+        </span>
+        <div class="development-notice__copy">
+          <span class="development-notice__eyebrow">A NOTE FROM QUAK<span class="notice-brown-letter">E</span></span>
+          <strong>Christ<span class="notice-brown-letter">m</span>as &amp; New Year
+            Are Around the Corner!</strong>
+          <span class="development-notice__message">Wishing you a safe, peaceful holiday season.</span>
+        </div>
+        <button aria-label="Close holiday announcement" class="development-notice__close" id="closeDevelopmentNotice" type="button">
+          <svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="19">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </aside>
+    <header class="site-header" id="quakeHeader">
+      <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark" data-i18n-aria="navLabel">
+        <div class="container site-container quake-nav-shell">
+          <a aria-label="QUAKE homepage" class="navbar-brand brand-slot" href="index.html">
+            <img alt="QUAKE logo" class="brand-logo" src="PBL_Logo_trim.png"/>
+          </a>
+          <button aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a aria-current="page" class="nav-link active" data-i18n="navHome" data-shell-key="home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navAbout" data-shell-key="about" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHistory" data-shell-key="history" href="earthquake-history.html">Earthquake History</a>
+              </li>
+              <li class="nav-item nav-item--with-language">
+                <a class="nav-link" data-i18n="navPreparedness" data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+                <div aria-label="Language selector" class="lang-picker">
+                  <button aria-expanded="false" aria-label="Change language" class="lang-button" type="button">
+                    <svg aria-hidden="true" class="language-icon" focusable="false" viewbox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                    </svg>
+                  </button>
+                  <div aria-label="Language options" class="lang-menu" role="menu">
+                    <button aria-checked="true" class="lang-option active" data-lang="en" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--gb" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#012169" height="16" width="24"></rect>
+                        <path d="M0 0h3.5L24 12.5V16h-3.5L0 3.5zM24 0h-3.5L0 12.5V16h3.5L24 3.5z" fill="#fff"></path>
+                        <path d="M0 0h1.7L24 13.6V16h-1.7L0 2.4zM24 0h-1.7L0 13.6V16h1.7L24 2.4z" fill="#c8102e"></path>
+                        <path d="M9 0h6v16H9zM0 5h24v6H0z" fill="#fff"></path>
+                        <path d="M10.2 0h3.6v16h-3.6zM0 6.2h24v3.6H0z" fill="#c8102e"></path></svg><span>English</span>
+                    </button>
+                    <button aria-checked="false" class="lang-option" data-lang="mm" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--mm" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#fecb00" height="5.34" width="24"></rect>
+                        <rect fill="#34b233" height="5.34" width="24" y="5.33"></rect>
+                        <rect fill="#ea2839" height="5.34" width="24" y="10.66"></rect>
+                        <path d="m12 2.8 2.1 4.25 4.7.68-3.4 3.32.8 4.68-4.2-2.2-4.2 2.2.8-4.68-3.4-3.32 4.7-.68z" fill="#fff"></path></svg><span>Myanmar</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <button aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="navMore" data-shell-key="more" id="moreMenu" type="button">
+                  More
+                </button>
+                <ul aria-labelledby="moreMenu" class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" data-i18n="navFaq" data-shell-key="faq" href="faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navReferences" data-shell-key="references" href="references.html">References</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navPrivacy" data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a>
+                  </li>
+                  <li><a class="dropdown-item" data-shell-key="news" href="earthquake-news.html">Earthquake News</a></li>
+                  <li><a class="dropdown-item" data-shell-key="contact" href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div aria-label="Historical earthquake fact" class="news-ticker">
+        <div class="news-ticker-track">
+          <span><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span><span aria-hidden="true"><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section aria-labelledby="hero-heading" class="hero" id="home">
+        <div aria-hidden="true" class="hero-photo">
+          <img alt="" fetchpriority="high" src="https://commons.wikimedia.org/wiki/Special:FilePath/2025_Myanmar_earthquake_damage_in_Mandalay.png?width=1400"/>
+        </div>
+        <div aria-hidden="true" class="hero-wash"></div>
+        <svg aria-hidden="true" class="hero-crack" id="heroCrack" preserveaspectratio="xMidYMid slice" viewbox="0 0 1000 580">
+          <path class="crack-shadow" d="M375 602 L407 545 405 518 438 488 436 462 481 438 493 407 520 413 540 380 571 363 577 338 613 344 624 304 654 295 658 264 690 249 713 210 734 218 753 188 778 174 786 139 812 145 834 109 858 101 881 62 906 51 929 -14"></path>
+          <path class="crack-core" d="M375 602 L407 545 405 518 438 488 436 462 481 438 493 407 520 413 540 380 571 363 577 338 613 344 624 304 654 295 658 264 690 249 713 210 734 218 753 188 778 174 786 139 812 145 834 109 858 101 881 62 906 51 929 -14"></path>
+          <path class="crack-edge" d="M379 602 L413 545 411 515 444 485 442 464 489 440 500 409 526 415 545 383 579 365 583 341 618 349 631 308 662 299 664 268 697 253 719 214 740 222 759 192 785 179 792 144 817 150 840 114 863 107 886 67 912 55 935 -14"></path>
+          <path class="crack-branch" d="M520 413 L503 394 506 369 494 349 505 331 491 307"></path>
+          <path class="crack-branch" d="M571 363 L554 341 556 316 539 302 548 278 536 251"></path>
+          <path class="crack-branch" d="M654 295 L675 304 695 297 719 321 738 321 764 350 782 353 797 380"></path>
+          <path class="crack-branch" d="M734 218 L707 205 696 184 673 175 678 149 658 133 653 103"></path>
+          <path class="crack-branch" d="M812 145 L832 163 835 186 853 199 850 222 873 249"></path>
+          <path class="crack-branch" d="M438 488 L421 474 396 468 384 443 363 437 352 414"></path>
+          <path class="crack-branch" d="M786 139 L760 118 746 91 727 82"></path>
+          <path class="crack-branch" d="M881 62 L867 42 862 19 850 -2"></path>
+        </svg>
+        <div class="container site-container hero-content">
+          <div class="hero-eyebrow">
+            <span class="accent-line"></span> MYANMAR EARTHQUAKE AWARENESS
+          </div>
+          <h1 class="display-heading" id="hero-heading">
+            EARTHQUAKES<br/><span class="orange-text">HAPPEN.</span>
+          </h1>
+          <p class="hero-description">
+            We can't stop earthquakes, but we can prepare for them. Explore
+            Myanmar's history of destructive earthquakes, understand their
+            impact, and discover simple ways to stay safer.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary-custom" href="#history">Learn More <span aria-hidden="true">↗</span></a>
+            <a class="btn-outline-custom" href="#preparedness">How to Prepare? <span aria-hidden="true">↗</span></a>
+          </div>
+          <div aria-label="Our approach" class="hero-keywords">
+            <span>LEARN</span><span>PREPARE</span><span>TAKE ACTION</span>
+          </div>
+        </div>
+        <button aria-label="Replay earthquake crack animation" class="replay-button" id="replayCrack" type="button">
+          ↻   REPLAY CRACK
+        </button>
+      </section>
+      <section aria-labelledby="about-heading" class="content-section about-section" id="about">
+        <div class="container site-container">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="section-eyebrow">
+                <span class="accent-line"></span> KNOW THE RISK
+              </div>
+              <h2 class="section-title" id="about-heading">
+                WHY EARTHQUAKES <span class="orange-text">MATTER.</span>
+              </h2>
+              <p class="content-copy">
+                Myanmar is located in a seismically active region, and the
+                Sagaing Fault passes through parts of the country. Earthquakes
+                can damage buildings, bridges, roads, schools, and historic
+                sites, sometimes with devastating consequences for local
+                communities.
+              </p>
+              <p class="content-copy mb-0">
+                QUAKE is a student-developed ICT PBL website that makes
+                historical earthquake information more accessible while
+                encouraging people to prepare <strong>before</strong> a disaster
+                takes place.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <figure class="about-photo-frame mb-0">
+                <img alt="Damage to a bridge on the Yangon–Mandalay Expressway following the 2025 Myanmar earthquake" class="about-photo-main" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_damaged_bridge_on_Yangon%E2%80%93Mandalay_Expressway_after_the_2025_Myanmar_earthquake.jpg?width=1100"/>
+                <div class="about-photo-thumb">
+                  <img alt="Emergency preparedness bag and supplies" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_37174_-_Emergency_Preparedness_%22ready_to_go%22_kit..jpg?width=500"/>
+                  <span aria-hidden="true">PACK A KIT</span>
+                </div>
+                <div class="about-photo-thumb">
+                  <img alt="Students practicing an earthquake drill in a classroom" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Students_practices_earthquake_drill._%2810727185804%29.jpg?width=500"/>
+                  <span aria-hidden="true">PRACTICE</span>
+                </div>
+                <figcaption>
+                  IMPACT / PREPAREDNESS / PRACTICE
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="preparedness-heading" class="content-section preparedness-section" id="preparedness">
+        <div class="container site-container">
+          <div class="section-eyebrow">
+            <span class="accent-line"></span> BE PREPARED
+          </div>
+          <h2 class="section-title" id="preparedness-heading">
+            BE READY <span class="orange-text">BEFORE</span> IT STRIKES!
+          </h2>
+          <p class="section-description">
+            Small actions taken before an earthquake can help protect you, your
+            family, and your school community. Explore three useful ways to
+            prepare.
+          </p>
+          <aside aria-labelledby="shaking-guide-heading" class="shaking-guide">
+            <div class="shaking-guide-heading">
+              <span aria-hidden="true" class="guide-icon">!</span>
+              <div>
+                <span class="readiness-kicker">WHEN THE GROUND SHAKES</span>
+                <h3 id="shaking-guide-heading">Remember these three things.</h3>
+              </div>
+            </div>
+            <div class="guide-steps">
+              <p>
+                <strong>01</strong><span>Drop to your hands and knees.</span>
+              </p>
+              <p>
+                <strong>02</strong><span>Cover your head and neck under sturdy furniture if you
+                  can.</span>
+              </p>
+              <p>
+                <strong>03</strong><span>Hold on and stay inside until the shaking stops.</span>
+              </p>
+            </div>
+            <p class="guide-note">
+              If you are outdoors, move away from buildings, trees, and power
+              lines when it is safe to do so.
+            </p>
+          </aside>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="preparedness-card h-100">
+                <div class="preparedness-picture">
+                  <img alt="Real photograph of an emergency preparedness bag and its supplies" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_37174_-_Emergency_Preparedness_%22ready_to_go%22_kit..jpg?width=800"/>
+                  <span class="picture-number">01 / PACK</span>
+                </div>
+                <div class="preparedness-body">
+                  <h3>EMERGENCY <span class="orange-text">KIT.</span></h3>
+                  <p>
+                    Prepare water, non-perishable food, medicines, a flashlight,
+                    batteries, and essential emergency contacts.
+                  </p>
+                  <button aria-controls="tip-kit" aria-expanded="false" class="tips-toggle" type="button">
+                    VIEW SAFETY TIPS <span aria-hidden="true">↗</span>
+                  </button>
+                  <div class="tips-content" hidden="" id="tip-kit">
+                    <p>
+                      Keep your supplies somewhere you can reach them easily.
+                      Include a first-aid kit, sturdy shoes, and copies of
+                      important documents. Check the kit regularly.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="preparedness-card h-100">
+                <div class="preparedness-picture">
+                  <img alt="Students practicing earthquake safety under classroom desks" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Students_practices_earthquake_drill._%2810727185804%29.jpg?width=800"/>
+                  <span class="picture-number">02 / PRACTICE</span>
+                </div>
+                <div class="preparedness-body">
+                  <h3>
+                    DROP, COVER, <span class="orange-text">HOLD ON.</span>
+                  </h3>
+                  <p>
+                    Know how to protect your head and neck and practice
+                    responding safely when the ground starts shaking.
+                  </p>
+                  <button aria-controls="tip-cover" aria-expanded="false" class="tips-toggle" type="button">
+                    VIEW SAFETY TIPS <span aria-hidden="true">↗</span>
+                  </button>
+                  <div class="tips-content" hidden="" id="tip-cover">
+                    <p>
+                      Drop to your hands and knees, cover your head and neck
+                      under sturdy furniture if available, and hold on until the
+                      shaking stops. Do not run outside during shaking.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="preparedness-card h-100">
+                <div class="preparedness-picture">
+                  <img alt="People taking part in a practice emergency evacuation" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Going_to_the_evacuation_site_%2848915144171%29.jpg?width=800"/>
+                  <span class="picture-number">03 / PLAN</span>
+                </div>
+                <div class="preparedness-body">
+                  <h3>SAFETY <span class="orange-text">PLAN.</span></h3>
+                  <p>
+                    Identify safe places, organize emergency contacts, and agree
+                    on a family meeting location for after an earthquake.
+                  </p>
+                  <button aria-controls="tip-plan" aria-expanded="false" class="tips-toggle" type="button">
+                    VIEW SAFETY TIPS <span aria-hidden="true">↗</span>
+                  </button>
+                  <div class="tips-content" hidden="" id="tip-plan">
+                    <p>
+                      Secure heavy furniture, know where to shelter in each
+                      room, establish an emergency communication plan, and take
+                      part in school and household drills.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="history-heading" class="content-section history-section" id="history">
+        <div class="container site-container">
+          <div class="history-heading-row">
+            <div>
+              <div class="section-eyebrow">
+                <span class="accent-line"></span> MYANMAR EARTHQUAKE HISTORY
+              </div>
+              <h2 class="section-title" id="history-heading">
+                HISTORICAL EARTHQUAKES
+                <span class="orange-text">IN MYANMAR.</span>
+              </h2>
+              <p class="section-description mb-0">
+                A closer look at one of Myanmar's most destructive recent
+                earthquakes. Discover its impact, then explore the full timeline
+                on our dedicated History page.
+              </p>
+            </div>
+            <a class="history-heading-link" href="earthquake-history.html">EXPLORE FULL HISTORY <span aria-hidden="true">↗</span></a>
+          </div>
+          <article class="featured-earthquake">
+            <div class="row g-0">
+              <div class="col-lg-5">
+                <figure class="featured-image mb-0">
+                  <img alt="A damaged building in Mandalay after the 28 March 2025 Myanmar earthquake" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Earthquake_Damage_Mandalay%2C_2025_%28cropped%29.png?width=800"/>
+                  <figcaption>
+                    <span class="image-tag">FEATURED EVENT / 2025</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-lg-7">
+                <div class="featured-content">
+                  <div class="featured-meta">
+                    <span class="date-badge">28 MARCH 2025</span><span>MANDALAY &amp; SAGAING, MYANMAR</span>
+                  </div>
+                  <h3>
+                    THE <span class="orange-text">MANDALAY–SAGAING</span><br/>
+                    EARTHQUAKE
+                  </h3>
+                  <p>
+                    On 28 March 2025, a magnitude 7.7 earthquake struck central
+                    Myanmar near Sagaing and Mandalay. Buildings, homes, public
+                    facilities, and vital infrastructure were heavily damaged.
+                    The disaster highlighted the importance of safer buildings
+                    and earthquake preparedness.
+                  </p>
+                  <div class="featured-stats">
+                    <div class="feature-stat">
+                      <strong>7.7</strong><span>MAGNITUDE</span>
+                    </div>
+                    <div class="feature-stat">
+                      <strong>3,745+</strong><span>REPORTED DEATHS¹</span>
+                    </div>
+                    <div class="feature-stat">
+                      <strong>157,000+</strong><span>LIKELY DAMAGED BUILDINGS²</span>
+                    </div>
+                  </div>
+                  <p class="featured-annotation">
+                    ¹ UNICEF reported at least 3,745 deaths as of 13 June 2025.
+                    ² UNU estimated likely building damage across seven assessed
+                    cities, not Mandalay alone.
+                  </p>
+                  <div class="featured-actions">
+                    <a class="btn-primary-custom" href="#preparedness">GET PREPARED <span aria-hidden="true">↗</span></a>
+                    <a class="source-link" href="earthquake-history.html">VIEW FULL TIMELINE ↗</a>
+                    <a class="source-link" href="https://unu.edu/inweh/collection/building-damage-assessment-march-2025-myanmar-earthquake" rel="noopener noreferrer" target="_blank">VIEW RESEARCH SOURCE ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="cta-heading" class="cta-section">
+        <div class="container site-container cta-layout">
+          <div>
+            <h2 id="cta-heading">
+              LEARN FROM THE PAST. <span>PREPARE FOR THE FUTURE.</span>
+            </h2>
+            <p>
+              Earthquakes cannot be predicted reliably by date or time.
+              Preparation and safer buildings help reduce risk.
+            </p>
+          </div>
+          <a href="#preparedness">START PREPARING <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer">
+      <div class="container site-container">
+        <div class="row gy-3 footer-columns">
+          <div class="col-md-4">
+            <a aria-label="QUAKE homepage" class="footer-brand-slot" href="index.html">
+              <img alt="QUAKE logo" class="footer-brand-logo" src="PBL_Logo_trim.png"/>
+            </a>
+            <p>
+              QUAKE is a student-led educational website about historical
+              earthquakes and disaster risk reduction in Myanmar.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 data-shell-key="quick">QUICK LINKS</h3>
+            <a data-shell-key="home" href="index.html">Home</a><a data-shell-key="about" href="about.html">About Us</a><a data-shell-key="history" href="earthquake-history.html">Earthquake History</a><a data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+          </div>
+          <div class="col-6 col-md-5 footer-help">
+            <h3 data-shell-key="help">HELP &amp; PRIVACY</h3>
+            <a data-shell-key="faq" href="faq.html">FAQ</a><a data-shell-key="references" href="references.html">References</a><a data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a><a data-shell-key="terms" href="privacy-policy.html#terms-of-service">Terms of Service</a><a data-shell-key="news" href="earthquake-news.html">Earthquake News</a><a data-shell-key="contact" href="contact.html">Contact Us</a><a data-shell-key="map" href="earthquake-map.html">Earthquake Impact Map</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Copyright © 2026 QUAKE. All rights reserved. Student educational
+            website developed by the QUAKE Development Team.</span><span data-shell-key="motto">LEARN · PREPARE · TAKE ACTION</span>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

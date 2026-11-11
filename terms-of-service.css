@@ -1,0 +1,225 @@
+/* QUAKE | Terms of Service — dark documentation page */
+.privacy-page .terms-card {
+  scroll-margin-top: 130px;
+  border-color: #6c4932 !important;
+  background: linear-gradient(165deg, #211f1d, #191d20 46%) !important;
+}
+.privacy-page .tos-heading-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+.privacy-page .tos-lead {
+  max-width: 650px;
+  margin: 11px 0 18px;
+  line-height: 1.8;
+  color: #c1c9cd !important;
+}
+.privacy-page .tos-version {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  color: #ffae71;
+  background: #31261d;
+  border: 1px solid #65402b;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 900;
+}
+.privacy-page .tos-doc {
+  padding: 21px 23px;
+  max-height: 420px;
+  overflow: auto;
+  scrollbar-color: #73503a #15191b;
+  border: 1px solid #3b4246;
+  border-radius: 9px;
+  background: #111719;
+  overscroll-behavior: contain;
+}
+.privacy-page .tos-doc section + section {
+  border-top: 1px solid #2a3337;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.privacy-page .tos-doc h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 850;
+  color: #f5f7f8;
+  margin: 0 0 7px;
+}
+.privacy-page .tos-doc p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #bec6cb !important;
+  margin: 0 !important;
+}
+.privacy-page .tos-agreement {
+  margin-top: 18px;
+  border: 1px solid #424b50;
+  background: #181f22;
+  border-radius: 9px;
+  padding: 19px;
+}
+.privacy-page .tos-agreement.is-accepted {
+  border-color: #456b5a;
+  background: #182420;
+}
+.privacy-page .tos-agreement-top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.privacy-page .tos-state-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #7d4d2d;
+  border-radius: 50%;
+  color: #f57a20;
+  background: #3b2b22;
+  flex: 0 0 36px;
+}
+.privacy-page .tos-agreement.is-accepted .tos-state-icon {
+  color: #abebcb;
+  background: #254c3a;
+  border-color: #45725b;
+}
+.privacy-page .tos-agreement-top strong {
+  display: block;
+  color: #f1f5f6;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+.privacy-page .tos-agreement-top p {
+  color: #a9bac2 !important;
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0 !important;
+}
+.privacy-page .tos-pending {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.privacy-page .tos-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  cursor: pointer;
+  color: #e1e6e8;
+  font-weight: 650;
+  font-size: 12px;
+  line-height: 1.65;
+  flex: 1 1 260px;
+}
+.privacy-page .tos-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: #f57a20;
+  flex: 0 0 18px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.privacy-page .tos-accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #f57a20;
+  color: #16191b;
+  border: 1px solid #f57a20;
+  border-radius: 6px;
+  padding: 11px 17px;
+  font-weight: 900;
+  font-size: 12px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.privacy-page .tos-accept:hover:not(:disabled) {
+  background: #ffa15c;
+  transform: translateY(-2px);
+}
+.privacy-page .tos-accept:disabled {
+  background: #333a3e;
+  color: #9eaaaf;
+  border-color: #4b555a;
+  cursor: not-allowed;
+}
+.privacy-page .tos-accepted {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.privacy-page .tos-accepted[hidden],
+.privacy-page .tos-pending[hidden],
+.privacy-page .tos-error[hidden] {
+  display: none !important;
+}
+.privacy-page .tos-accepted p {
+  margin: 0 !important;
+  color: #b4d1c2 !important;
+  font-size: 11px;
+}
+.privacy-page .tos-revoke {
+  border: 1px solid #63746b;
+  color: #d5e5da;
+  background: transparent;
+  border-radius: 6px;
+  padding: 9px 13px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.privacy-page .tos-revoke:hover {
+  border-color: #ffc18b;
+  color: #ffc18b;
+}
+.privacy-page .tos-storage-notice {
+  border-top: 1px solid #394145;
+  margin: 17px 0 0 !important;
+  padding-top: 12px;
+  color: #96a6ad !important;
+  font-size: 10px !important;
+  line-height: 1.7;
+}
+.privacy-page .tos-error {
+  color: #ffb6a5 !important;
+  margin: 9px 0 0 !important;
+  font-size: 11px;
+}
+.privacy-page .privacy-sidebar a[href="#terms-of-service"] {
+  border-left: 2px solid #f57a20;
+}
+@media (max-width: 600px) {
+  .privacy-page .tos-heading-line {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .privacy-page .tos-doc {
+    padding: 15px;
+    max-height: 450px;
+  }
+  .privacy-page .tos-agreement {
+    padding: 15px;
+  }
+  .privacy-page .tos-pending {
+    align-items: stretch;
+  }
+  .privacy-page .tos-accept {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .privacy-page .tos-accept {
+    transition: none;
+  }
+}

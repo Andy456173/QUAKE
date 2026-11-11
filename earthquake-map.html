@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="Explore the March 2025 Myanmar earthquake by state, region and city. A source-based interactive map by QUAKE." name="description"/>
+    <title>Earthquake Impact Map | QUAKE</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+Myanmar:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="earthquake-map.css" rel="stylesheet"/>
+    <script defer="" src="earthquake-map.js"></script>
+    <link href="site-shell.css" rel="stylesheet"/>
+    <link href="Fav.png" rel="icon" type="image/png"/>
+    <script defer="" src="site-shell.js"></script>
+  </head>
+  <body class="impact-map-page" data-page="earthquake-map.html">
+    <header class="site-header" id="quakeHeader">
+      <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark" data-i18n-aria="navLabel">
+        <div class="container site-container quake-nav-shell">
+          <a aria-label="QUAKE homepage" class="navbar-brand brand-slot" href="index.html">
+            <img alt="QUAKE logo" class="brand-logo" src="PBL_Logo_trim.png"/>
+          </a>
+          <button aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHome" data-shell-key="home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navAbout" data-shell-key="about" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a aria-current="page" class="nav-link active" data-i18n="navHistory" data-shell-key="history" href="earthquake-history.html">Earthquake History</a>
+              </li>
+              <li class="nav-item nav-item--with-language">
+                <a class="nav-link" data-i18n="navPreparedness" data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+                <div aria-label="Language selector" class="lang-picker">
+                  <button aria-expanded="false" aria-label="Change language" class="lang-button" type="button">
+                    <svg aria-hidden="true" class="language-icon" focusable="false" viewbox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                    </svg>
+                  </button>
+                  <div aria-label="Language options" class="lang-menu" role="menu">
+                    <button aria-checked="true" class="lang-option active" data-lang="en" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--gb" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#012169" height="16" width="24"></rect>
+                        <path d="M0 0h3.5L24 12.5V16h-3.5L0 3.5zM24 0h-3.5L0 12.5V16h3.5L24 3.5z" fill="#fff"></path>
+                        <path d="M0 0h1.7L24 13.6V16h-1.7L0 2.4zM24 0h-1.7L0 13.6V16h1.7L24 2.4z" fill="#c8102e"></path>
+                        <path d="M9 0h6v16H9zM0 5h24v6H0z" fill="#fff"></path>
+                        <path d="M10.2 0h3.6v16h-3.6zM0 6.2h24v3.6H0z" fill="#c8102e"></path></svg><span>English</span>
+                    </button>
+                    <button aria-checked="false" class="lang-option" data-lang="mm" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--mm" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#fecb00" height="5.34" width="24"></rect>
+                        <rect fill="#34b233" height="5.34" width="24" y="5.33"></rect>
+                        <rect fill="#ea2839" height="5.34" width="24" y="10.66"></rect>
+                        <path d="m12 2.8 2.1 4.25 4.7.68-3.4 3.32.8 4.68-4.2-2.2-4.2 2.2.8-4.68-3.4-3.32 4.7-.68z" fill="#fff"></path></svg><span>Myanmar</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <button aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="navMore" data-shell-key="more" id="moreMenu" type="button">
+                  More
+                </button>
+                <ul aria-labelledby="moreMenu" class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" data-i18n="navFaq" data-shell-key="faq" href="faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navReferences" data-shell-key="references" href="references.html">References</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navPrivacy" data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a>
+                  </li>
+                  <li><a class="dropdown-item" data-shell-key="news" href="earthquake-news.html">Earthquake News</a></li>
+                  <li><a class="dropdown-item" data-shell-key="contact" href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div aria-label="Historical earthquake fact" class="news-ticker">
+        <div class="news-ticker-track">
+          <span><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span><span aria-hidden="true"><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="atlas-intro">
+        <div class="container site-container">
+          <nav aria-label="Breadcrumb" class="crumbs">
+            <a data-t="navHome" href="index.html">HOME</a><i data-lucide="chevron-right"></i><a data-t="navHistory" href="earthquake-history.html">EARTHQUAKE HISTORY</a><i data-lucide="chevron-right"></i><span data-t="crumbMap">IMPACT MAP</span>
+          </nav>
+          <div class="atlas-intro-row">
+            <div>
+              <div class="atlas-eyebrow">
+                <span class="orange-rule"></span><span data-t="kicker">2025 MYANMAR EARTHQUAKE</span>
+              </div>
+              <h1 class="atlas-title">
+                <span data-t="heroPart1">WHERE THE</span>
+                <span class="highlight" data-t="heroPart2">GROUND</span><br/><span data-t="heroPart3">MOVED.</span>
+              </h1>
+              <p class="atlas-lead" data-t="heroDesc">
+                Explore the impact of Myanmar's 28 March 2025 earthquake by
+                state, region, and city. Every number is linked to a published
+                source — missing figures are left blank rather than guessed.
+              </p>
+            </div>
+            <div class="event-pill">
+              <div class="event-pill-top">
+                <i data-lucide="activity"></i><span data-t="featuredEvent">FEATURED EARTHQUAKE</span>
+              </div>
+              <strong>28.03.2025</strong><span data-t="eventPillSub">CENTRAL MYANMAR · Mw 7.7</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="atlas-dashboard container site-container" aria-label="2025 earthquake impact map">
+        <div class="map-card" id="impact-map">
+          <div class="map-topbar">
+            <div>
+              <h2 data-t="mapTitle">2025 Earthquake Impact Map</h2>
+              <p class="map-subtitle" data-t="mapSubtitle">Choose an area on the map to view its information.</p>
+            </div>
+            <span class="map-top-pill"><span class="status-signal"></span><span data-t="mapBadge">Interactive map</span></span>
+          </div>
+
+          <div class="map-stage" id="mapStage">
+            <!-- The map shapes below are already in the HTML. JavaScript makes them clickable. -->
+            <svg aria-label="Interactive regional map of Myanmar, Thailand, China, and neighbouring countries impacted by the 2025 earthquake" class="myanmar-map" id="myanmarMap" preserveaspectratio="xMidYMid meet" role="img" viewbox="-365 -140 1570 1020">
+                <defs>
+                  <filter height="180%" id="mapShadow" width="180%" x="-40%" y="-40%">
+                    <fedropshadow dx="0" dy="8" flood-color="#28718b" flood-opacity=".17" stddeviation="8"></fedropshadow>
+                  </filter>
+                  <lineargradient id="groundFill" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#d8eef1"></stop>
+                    <stop offset="100%" stop-color="#c5e4e9"></stop>
+                  </lineargradient>
+                </defs>
+                <g id="countryShapes">
+                  <path class="country-area" data-country="India" d="M370,26L347,32L352,55L305,48L219,73L221,94L185,124L182,141L152,171L101,163L98,200L83,212L90,228L58,236L23,179L5,179L-6,202L-42,183L-22,163L8,161L38,130L0,124L-124,120L-130,95L-161,93L-214,78L-237,102L-189,121L-231,134L-245,148L-205,157L-216,179L-193,206L-183,236L-192,249L-318,256L-315,283L-350,304L-449,331L-449,59L-432,67L-302,79L-247,79L-239,64L-248,42L-243,26L-203,18L-196,54L-136,68L-94,62L15,63L20,41L-7,30L46,25L106,-1L183,-24L238,-16L285,-31L316,-8L294,7L365,12Z"></path>
+                  <path class="country-area" data-country="Bangladesh" d="M56,262L33,256L38,285L19,267L2,231L-25,210L-86,209L-80,223L-101,243L-129,236L-138,243L-183,236L-193,206L-216,179L-205,157L-245,148L-231,134L-189,121L-237,102L-214,78L-161,93L-130,95L-124,120L0,124L38,130L8,161L-22,163L-42,183L-6,202L5,179L23,179L58,236Z"></path>
+                  <path class="country-area" data-country="China" d="M1112,363L1111,332L1143,316L1215,306L1253,307L1268,321L1239,336L1224,357L1167,374ZM1452,218L1415,236L1323,254L1253,259L1231,297L1194,299L1177,273L1192,259L1104,248L1073,254L1006,244L975,230L985,209L925,202L893,189L837,208L720,212L650,226L660,267L625,266L617,243L569,253L491,233L510,203L469,196L453,163L383,169L391,127L454,97L454,39L425,31L403,10L365,12L294,7L316,-8L285,-31L238,-16L183,-24L106,-1L46,25L-7,30L-36,20L-118,11L-153,20L-197,47L-203,18L-243,26L-320,23L-394,14L-449,-2L-449,-194L1465,-194L1465,224Z"></path>
+                  <path class="country-area" data-country="Laos" d="M970,505L940,530L886,516L907,500L910,469L857,438L853,402L802,373L752,370L739,383L700,384L681,378L611,399L610,367L626,329L581,327L577,306L549,295L563,281L619,258L625,266L660,267L650,226L684,221L753,282L834,282L859,314L817,323L798,336L877,358L974,432L1024,457L1040,482L1028,518Z"></path>
+                  <path class="country-area" data-country="Thailand" d="M824,511L738,517L696,547L712,591L653,574L596,575L606,547L548,547L542,587L485,671L490,697L533,698L560,731L572,762L608,783L648,787L683,806L661,820L617,825L612,806L558,790L547,797L521,783L509,765L442,728L432,749L419,729L446,672L514,601L488,569L482,532L438,503L422,485L445,478L469,447L368,366L396,359L426,320L473,318L549,295L577,306L581,327L626,329L610,367L611,399L681,378L700,384L739,383L752,370L802,373L853,402L857,438L910,469L907,500L886,516Z"></path>
+                  <path class="country-area" data-country="Vietnam" d="M884,638L954,635L925,613L1036,585L1044,542L1028,518L1040,482L1024,457L974,432L877,358L798,336L817,323L859,314L834,282L753,282L684,221L720,212L837,208L893,189L925,202L985,209L975,230L1006,244L1073,254L984,285L929,319L915,344L1027,428L1087,451L1127,480L1157,546L1148,610L1093,633L1018,656L964,686L882,720L858,697L876,673L827,652Z"></path>
+                  <path class="country-area" data-country="Cambodia" d="M696,547L738,517L824,511L886,516L940,530L970,505L1028,518L1044,542L1036,585L925,613L954,635L884,638L827,652L772,647L745,628L712,591Z"></path>
+                  <path class="country-area" data-country="Bhutan" d="M20,41L15,63L-94,62L-136,68L-196,54L-197,47L-153,20L-118,11L-36,20Z"></path>
+                  <path class="country-area" data-country="Nepal" d="M-248,42L-239,64L-247,79L-302,79L-432,67L-449,59L-449,-2L-394,14L-243,26Z"></path>
+                  <path class="country-area" data-country="Myanmar" d="M549,295L473,318L426,320L396,359L368,366L469,447L445,478L422,485L438,503L482,532L488,569L514,601L446,672L439,645L460,618L437,596L443,557L416,539L383,450L354,420L236,464L158,452L180,408L167,374L115,332L123,319L84,315L38,285L33,256L56,262L58,236L90,228L83,212L98,200L101,163L152,171L182,141L185,124L221,94L219,73L305,48L352,55L347,32L370,26L365,12L403,10L425,31L454,39L454,97L391,127L383,169L453,163L469,196L510,203L491,233L569,253L617,243L619,258L563,281Z"></path>
+                </g>
+                <g id="stateShapes">
+                  <path class="admin-region" data-region="Ayeyarwady" d="M199,459L199,456L193,460L199,459ZM228,459L234,454L233,450L229,452L228,459ZM219,448L219,442L200,455L203,460L202,457L208,455L200,461L209,463L219,448ZM188,450L188,445L170,454L171,460L188,450ZM223,450L218,454L223,450ZM182,400L182,406L187,408L181,406L178,407L179,412L174,411L177,413L174,419L177,419L170,421L172,425L168,433L162,434L158,448L161,455L180,446L176,443L190,440L190,427L193,431L194,427L192,430L197,433L191,436L192,439L197,438L189,445L195,445L182,456L209,442L185,456L190,459L203,447L214,442L203,447L204,453L219,442L220,449L230,447L219,453L219,461L226,461L233,450L231,448L237,443L230,464L245,462L258,452L258,444L261,449L265,448L273,440L265,437L269,434L266,422L270,419L252,405L260,400L240,392L244,389L237,376L239,374L223,364L200,369L205,375L199,382L204,387L203,392L197,394L198,400L193,406L182,400ZM189,441L183,445L189,441ZM270,447L273,440L267,446L270,447ZM273,446L282,441L276,440L273,446ZM194,431L191,431L191,436L196,433L194,431Z"></path>
+                  <path class="admin-region affected" data-region="Bago" d="M260,400L283,389L296,402L297,410L304,415L302,418L324,418L332,424L330,421L334,422L336,413L342,413L336,410L339,407L335,407L335,396L350,400L358,398L351,384L356,376L340,366L340,359L323,360L316,355L320,353L316,350L322,348L316,348L310,340L314,339L303,329L264,329L268,335L266,340L239,339L215,352L201,346L191,347L195,351L190,353L195,357L191,359L196,361L194,365L200,369L223,364L239,374L237,376L244,389L240,392L260,400Z"></path>
+                  <path class="admin-region" data-region="Chin" d="M136,286L151,282L145,275L153,268L152,264L146,263L153,253L146,248L144,241L149,222L146,222L148,216L144,208L147,203L142,195L146,191L142,187L147,188L146,182L153,182L155,172L129,165L113,168L102,162L108,177L103,189L105,197L87,201L90,205L86,209L86,219L92,228L82,230L80,238L76,236L73,240L70,235L59,232L53,239L54,256L67,270L88,270L90,279L120,284L119,279L125,276L136,286Z"></path>
+                  <path class="admin-region" data-region="Kachin" d="M321,160L322,166L334,165L335,172L329,175L349,179L386,170L378,168L393,160L391,157L394,156L387,155L390,153L387,149L378,150L381,138L396,135L391,133L391,127L399,120L405,122L418,116L420,107L430,110L443,100L456,99L447,89L458,87L454,83L461,72L458,68L460,56L455,50L458,46L456,37L438,34L438,38L430,39L420,27L419,17L381,2L376,4L378,10L366,13L367,26L360,25L336,36L337,41L353,54L292,59L298,60L282,69L289,75L277,76L289,91L283,97L291,104L281,109L274,108L282,130L278,131L278,126L264,131L271,140L282,141L291,146L289,148L305,146L319,149L314,153L321,160Z"></path>
+                  <path class="admin-region" data-region="Kayah" d="M367,360L373,364L394,361L392,350L387,348L399,342L395,331L402,328L399,322L380,319L382,316L378,313L353,310L354,318L337,325L335,327L341,330L331,336L349,357L367,360Z"></path>
+                  <path class="admin-region" data-region="Kayin" d="M361,357L349,357L330,331L321,327L318,330L303,329L314,339L310,340L314,346L322,348L316,350L320,353L316,355L323,360L340,359L340,366L356,376L351,382L356,389L353,391L356,398L370,392L367,395L377,410L372,417L374,422L386,432L408,438L418,447L397,449L400,465L406,466L424,482L442,475L446,478L445,465L449,458L446,452L465,449L470,440L464,438L454,444L447,431L440,428L445,421L396,393L388,386L392,382L385,370L374,371L361,357Z"></path>
+                  <path class="admin-region affected" data-region="Magway" d="M136,286L135,290L150,296L165,312L168,325L180,333L179,339L191,347L200,346L215,352L239,339L266,340L268,337L258,323L265,316L262,308L266,304L260,300L258,291L249,288L251,284L240,282L213,290L214,279L200,276L202,266L222,262L234,253L219,243L173,244L173,233L163,231L163,220L153,210L146,211L146,222L149,222L144,240L146,248L153,253L146,263L152,264L153,268L145,275L151,282L136,286Z"></path>
+                  <path class="admin-region affected assessed selected" data-region="Mandalay" d="M234,253L222,262L202,266L200,276L214,279L213,290L240,282L251,284L249,288L258,291L260,300L266,304L262,308L265,316L258,323L260,328L286,331L289,328L318,330L322,327L313,323L320,321L301,309L308,308L306,305L313,302L308,293L314,288L306,285L315,278L291,271L302,267L296,261L298,254L336,247L327,235L310,232L293,215L291,211L295,209L319,208L324,204L311,200L293,201L287,197L288,190L303,181L287,181L284,177L271,187L277,198L275,211L271,212L277,219L274,223L278,226L277,242L246,241L238,245L234,253Z"></path>
+                  <path class="admin-region" data-region="Mon" d="M377,436L372,437L378,447L383,436L377,436ZM399,434L384,436L385,446L380,451L391,459L389,462L395,475L391,478L394,483L399,483L395,483L395,494L402,487L410,486L421,491L425,488L421,486L421,478L400,465L397,449L418,447L399,434ZM358,398L350,400L336,395L334,398L336,406L347,412L345,417L349,421L354,413L359,429L365,430L367,435L384,435L384,430L372,418L377,410L367,395L370,392L358,398Z"></path>
+                  <path class="admin-region" data-region="Rakhine" d="M200,369L191,359L195,358L190,353L195,352L191,344L179,339L180,333L168,325L165,312L141,289L135,290L134,282L125,276L119,279L121,284L113,284L90,279L88,270L66,270L64,266L53,265L50,260L42,260L38,256L26,262L28,265L25,267L35,271L31,275L38,277L35,279L38,284L62,300L62,289L52,285L50,279L53,285L56,283L63,288L63,292L71,296L75,294L71,292L75,294L68,295L71,298L76,295L63,303L72,305L71,300L74,303L75,299L80,299L85,289L80,286L87,294L80,305L93,298L86,303L96,301L101,294L98,297L106,303L107,311L132,313L126,321L133,319L135,322L127,323L140,328L141,325L139,329L145,330L124,325L121,328L130,335L146,332L143,335L121,338L123,334L119,331L110,333L123,345L141,351L144,347L139,338L146,340L144,338L150,332L147,341L154,340L147,343L155,341L148,344L147,349L153,347L146,351L156,349L154,352L163,355L154,355L172,370L166,373L175,374L178,382L174,382L185,399L181,398L193,406L198,400L197,394L204,388L199,382L205,375L200,369ZM121,349L111,350L121,357L129,356L129,350L121,349ZM69,294L63,294L64,299L70,298L69,294ZM87,294L85,291L82,297L87,294ZM75,306L81,316L75,306ZM79,305L91,317L86,312L87,308L79,305ZM91,303L85,303L91,308L95,305L91,303ZM98,302L91,303L95,305L93,309L102,307L98,302ZM101,298L97,300L104,309L107,305L101,298ZM126,314L121,315L118,321L130,314L126,314ZM109,312L105,311L113,319L114,313L109,312Z"></path>
+                  <path class="admin-region affected assessed" data-region="Sagaing" d="M146,211L153,210L161,217L163,231L173,233L172,243L178,245L219,243L234,253L238,245L246,241L277,242L278,226L274,223L277,219L271,213L275,211L277,198L271,187L284,177L287,181L298,178L303,181L314,172L311,165L303,165L321,160L314,153L319,149L305,146L289,148L291,146L282,141L271,140L264,131L278,126L278,131L282,130L274,108L291,106L283,97L289,91L277,76L289,75L282,69L294,65L292,62L298,60L294,58L342,57L348,54L334,51L336,48L324,44L298,47L278,51L259,62L218,74L215,77L220,80L219,90L223,91L212,97L214,103L187,115L183,122L194,125L192,132L171,148L156,168L153,182L148,181L147,188L142,187L146,191L142,194L147,203L146,211Z"></path>
+                  <path class="admin-region affected" data-region="Shan" d="M303,181L288,189L287,197L293,201L311,200L324,204L319,208L291,211L299,219L299,224L304,224L314,234L327,235L336,247L298,254L296,261L302,267L291,271L315,278L306,285L314,288L308,293L313,302L306,305L308,308L301,309L320,321L314,324L334,335L341,330L335,327L354,318L353,310L377,313L383,321L400,325L412,322L412,316L426,321L447,321L465,316L470,319L476,317L480,306L497,307L512,303L505,295L529,298L538,293L547,297L558,283L584,278L575,278L589,262L597,263L618,255L613,246L579,257L570,254L552,256L548,252L552,250L540,248L539,236L485,232L491,229L492,223L500,220L496,211L506,207L504,204L513,204L509,199L468,195L472,190L467,190L470,187L462,182L468,179L454,172L455,166L469,162L467,160L415,162L349,179L329,175L335,172L334,165L322,166L321,160L314,160L303,165L311,165L314,172L303,181Z"></path>
+                  <path class="admin-region" data-region="Tanintharyi" d="M429,605L420,618L427,617L429,605ZM444,605L433,606L438,607L434,610L444,615L444,605ZM439,594L440,602L453,600L444,599L439,594ZM410,603L410,609L415,611L410,603ZM427,667L417,675L429,669L427,667ZM421,634L415,638L426,639L426,645L429,641L421,634ZM445,633L444,630L440,634L443,636L445,633ZM396,494L398,500L405,497L408,501L401,501L407,510L409,508L407,513L416,518L413,524L414,534L419,537L417,542L421,542L422,525L425,536L429,536L441,547L441,552L447,554L448,563L453,562L448,564L452,570L457,568L450,570L456,571L450,578L459,580L448,582L457,585L445,583L453,586L444,588L449,591L455,589L458,591L450,594L461,597L456,595L454,597L458,599L445,602L457,602L448,606L455,609L463,603L461,607L474,612L470,613L467,608L457,610L460,618L455,620L461,624L452,629L457,631L454,634L461,634L453,637L456,639L452,636L447,638L451,640L443,643L446,645L440,643L445,656L441,662L446,671L451,662L455,662L451,658L455,661L463,653L461,645L492,628L506,612L519,604L513,602L512,592L506,593L508,591L502,581L504,576L491,572L488,562L482,559L489,552L482,529L449,514L426,496L425,491L410,486L402,487L396,494ZM426,554L429,565L428,560L431,559L426,554ZM416,587L412,590L419,593L416,587ZM415,582L405,586L410,588L415,582ZM430,573L429,585L432,586L441,577L437,579L430,573Z"></path>
+                  <path class="admin-region" data-region="Yangon" d="M266,436L286,442L299,437L285,424L290,426L300,421L291,426L295,433L308,432L296,432L303,436L320,434L332,424L324,418L302,418L304,415L297,410L296,402L281,389L252,404L270,419L266,422L269,425L266,436Z"></path>
+                </g>
+                <g id="mapPulse" pointer-events="none"></g>
+                <g id="mapCityMarkers"></g>
+                <g id="neighborMarkers"></g>
+                <g id="mapTopLabels" pointer-events="none">
+                  <text x="375" y="91" class="map-state-caption" data-label="Kachin" text-anchor="middle">Kachin</text>
+                  <text x="202" y="173" class="map-state-caption" data-label="Sagaing" text-anchor="middle">Sagaing</text>
+                  <text x="456" y="268" class="map-state-caption" data-label="Shan" text-anchor="middle">Shan</text>
+                  <text x="271" y="284" class="map-state-caption" data-label="Mandalay" text-anchor="middle">Mandalay</text>
+                  <text x="297" y="369" class="map-state-caption" data-label="Bago" text-anchor="middle">Bago</text>
+                  <text x="710" y="500" class="country-label" data-country-caption="THAILAND">THAILAND</text>
+                  <text x="830" y="70" class="country-label" data-country-caption="CHINA">CHINA</text>
+                </g>
+              </svg>
+
+            <!-- A small summary, placed in the top-left of the map. -->
+            <aside class="map-quick-facts" aria-label="Earthquake facts">
+              <h3 data-t="overviewTitle">QUICK FACTS</h3>
+              <div class="quick-facts-grid">
+                <div class="quick-fact">
+                  <strong>7.7 <small>Mw</small></strong>
+                  <span data-t="magnitude">MAGNITUDE</span>
+                </div>
+                <div class="quick-fact">
+                  <strong>28 <small>MAR</small></strong>
+                  <span data-t="dateLabel">2025 · 12:50 LOCAL</span>
+                </div>
+                <div class="quick-fact">
+                  <strong>157,414<small>+</small></strong>
+                  <span data-t="damagedLabel">LIKELY DAMAGED BUILDINGS¹</span>
+                </div>
+                <div class="quick-fact">
+                  <strong>3,600–5,350</strong>
+                  <span data-t="deathsLabel">ESTIMATED DEATHS · NATIONWIDE²</span>
+                </div>
+              </div>
+            </aside>
+
+            <!-- The map buttons still work with the same JavaScript IDs. -->
+            <div class="map-preset" aria-label="Map view">
+              <button class="active" data-t="regionalView" id="regionalView" type="button">REGIONAL VIEW</button>
+              <button data-t="backToMyanmar" id="myanmarView" type="button">MYANMAR VIEW</button>
+            </div>
+            <div class="map-zoom" aria-label="Zoom controls">
+              <button type="button" id="zoomIn" aria-label="Zoom in"><i data-lucide="plus"></i></button>
+              <button type="button" id="zoomOut" aria-label="Zoom out"><i data-lucide="minus"></i></button>
+              <button type="button" id="zoomReset" aria-label="Reset zoom"><i data-lucide="maximize-2"></i></button>
+            </div>
+
+            <!-- Selected region details, in a compact bottom-left panel. -->
+            <aside class="region-inspector map-region-panel" id="regionInspector" aria-live="polite">
+              <div class="inspector-topline">
+                <h3 data-t="inspectorTag" id="inspectorTagLabel">REGION INSPECTOR</h3>
+                <span id="regionType" class="inspector-type">REGION</span>
+              </div>
+              <h4 id="selectedRegion">MANDALAY REGION</h4>
+              <div class="inspector-metrics">
+                <div>
+                  <small data-t="sampledCities" id="regionCitiesLabel">ASSESSED CITIES</small>
+                  <strong id="regionCities">5 / 7</strong>
+                </div>
+                <div>
+                  <small data-t="regionBuildings" id="regionBuildingsLabel">LIKELY DAMAGED BUILDINGS¹</small>
+                  <strong id="regionBuildingsValue">128,033</strong>
+                </div>
+              </div>
+              <div class="inspector-deaths">
+                <span data-t="preliminaryDeaths" id="regionDeathsLabel">PRELIMINARY REPORTED DEATHS³</span>
+                <strong id="regionDeaths">1,790</strong>
+              </div>
+              <!-- Longer explanations are hidden until someone asks to see them. -->
+              <details class="inspector-notes">
+                <summary data-t="inspectorMore">Read details and sources</summary>
+                <p id="regionDescription">Mandalay, Pyin Oo Lwin, Madaya, Kyaukse and Woundwin are included in the city assessment.</p>
+                <p data-t="regionCaution" id="regionSourceNote">The figures are estimates and preliminary reports, not final totals.</p>
+                <a class="inspector-source-link" hidden href="https://www.adrc.asia/view_disaster_en.php?Key=2743" id="inspectorSource" target="_blank" rel="noopener noreferrer">
+                  <span data-t="crossSource">OPEN SOURCE</span><i data-lucide="external-link"></i>
+                </a>
+              </details>
+              <div class="region-pager">
+                <button id="prevRegion" type="button"><i data-lucide="arrow-left"></i><span data-t="prevRegion">PREVIOUS</span></button>
+                <button id="nextRegion" type="button"><span data-t="nextRegion">NEXT REGION</span><i data-lucide="arrow-right"></i></button>
+              </div>
+            </aside>
+
+            <div class="map-hint"><i data-lucide="mouse-pointer-2"></i><span data-t="mapHint">Drag to move the map · Select a location for details</span></div>
+            <div class="map-legend">
+              <div><span class="legend-dot legend-strong"></span><span data-t="legendSelected">Selected area</span></div>
+              <div><span class="legend-dot legend-affected"></span><span data-t="legendAffected">Reported Myanmar impact</span></div>
+              <div><span class="legend-dot legend-neutral"></span><span data-t="legendNeutral">Neighbouring countries</span></div>
+              <div><span class="legend-dot legend-city"></span><span data-t="legendCity">City marker</span></div>
+            </div>
+          </div>
+          <div class="map-footnote">
+            <span class="map-footnote-icon"><i data-lucide="info"></i></span>
+            <div class="map-footnote-copy">
+              <strong data-t="boundaryNoteTitle">MAP &amp; DATA NOTE</strong>
+              <span data-t="boundaryNote">Geographic context only — not a ShakeMap. Boundaries are simplified; reported shaking does not confirm building damage.</span>
+            </div>
+          </div>
+          <div class="map-stat-note" role="note">
+            <span class="map-stat-note-icon" aria-hidden="true"><i data-lucide="chart-no-axes-column-increasing"></i></span>
+            <div class="map-stat-note-copy">
+              <strong data-t="statisticsNoteTitle">ESTIMATE &amp; REPORTING NOTE</strong>
+              <span data-t="statsDisclaimer">Seven-city building assessment only. Deaths are a research estimate, not a confirmed final total.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="crossBorderHeading" class="cross-border-section container site-container reveal" id="crossBorderSection">
+        <div class="cross-border-heading">
+          <div class="atlas-eyebrow">
+            <span class="orange-rule"></span><span data-t="crossOverline">NEIGHBOURING COUNTRIES</span>
+          </div>
+          <h2 data-t="crossTitle" id="crossBorderHeading">
+            THE IMPACT REACHED BEYOND MYANMAR.
+          </h2>
+          <p data-t="crossDesc">
+            Thailand recorded deaths and structural damage; damage was also
+            reported in Ruili, China. Other nearby countries reported shaking.
+            Choose a location for the source and reporting scope.
+          </p>
+        </div>
+        <div class="cross-border-grid" id="crossBorderGrid"></div>
+      </section>
+      <section class="method-section">
+        <div class="container site-container">
+          <div class="method-left">
+            <div class="atlas-eyebrow">
+              <span class="orange-rule"></span><span data-t="sourcesOverline">ABOUT THE DATA</span>
+            </div>
+            <h2 data-t="sourcesTitle">THE NUMBERS NEED CONTEXT.</h2>
+            <p data-t="sourcesDescription">
+              Regional casualty figures are preliminary snapshots.
+              Satellite-derived building damage is an estimate for seven cities
+              only. They use different sources, geographic coverage, and
+              reporting dates. Do not combine or compare these as if they were a
+              complete census.
+            </p>
+          </div>
+          <div class="method-links">
+            <a href="https://doi.org/10.53328/INR24MSIR002" rel="noopener noreferrer" target="_blank"><i data-lucide="file-text"></i><span>UNU-INWEH · June 2025 building assessment (DOI)</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://myanmar.un.org/en/291866-initial-situation-report-earthquake-central-myanmar-28-march-2025" rel="noopener noreferrer" target="_blank"><i data-lucide="file-text"></i><span>United Nations · initial report, 29 March 2025</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://myanmar.un.org/en/291929-sagaing-earthquake-myanmar-situation-report-2nd-edition" rel="noopener noreferrer" target="_blank"><i data-lucide="file-text"></i><span>WHO · preliminary reports, 30 March 2025</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://www.geoboundaries.org/" rel="noopener noreferrer" target="_blank"><i data-lucide="map"></i><span>geoBoundaries · Myanmar ADM1 boundaries (CC BY 4.0)</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://www.adrc.asia/view_disaster_en.php?Key=2743" rel="noopener noreferrer" target="_blank"><i data-lucide="file-text"></i><span>ADRC / Thailand DDPM · 12 May 2025 national totals</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://www.gdacs.org/report.aspx?eventid=1474477&amp;eventtype=EQ" rel="noopener noreferrer" target="_blank"><i data-lucide="file-text"></i><span>ECHO / GDACS · Ruili, China earthquake effects</span><i data-lucide="arrow-up-right"></i></a>
+            <a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/" rel="noopener noreferrer" target="_blank"><i data-lucide="map"></i><span>Natural Earth · Public-domain country boundaries</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </div>
+      </section>
+      <section class="return-section">
+        <div class="container site-container return-row">
+          <div>
+            <span data-t="endKicker">BACK TO THE RECORD</span>
+            <h2 data-t="endTitle">EXPLORE THE FULL TIMELINE.</h2>
+          </div>
+          <a href="earthquake-history.html"><span data-t="returnHistory">RETURN TO EARTHQUAKE HISTORY</span><i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer">
+      <div class="container site-container">
+        <div class="row gy-3 footer-columns">
+          <div class="col-md-4">
+            <a aria-label="QUAKE homepage" class="footer-brand-slot" href="index.html">
+              <img alt="QUAKE logo" class="footer-brand-logo" src="PBL_Logo_trim.png"/>
+            </a>
+            <p>
+              QUAKE is a student-led educational website about historical
+              earthquakes and disaster risk reduction in Myanmar.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 data-shell-key="quick">QUICK LINKS</h3>
+            <a data-shell-key="home" href="index.html">Home</a><a data-shell-key="about" href="about.html">About Us</a><a data-shell-key="history" href="earthquake-history.html">Earthquake History</a><a data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+          </div>
+          <div class="col-6 col-md-5 footer-help">
+            <h3 data-shell-key="help">HELP &amp; PRIVACY</h3>
+            <a data-shell-key="faq" href="faq.html">FAQ</a><a data-shell-key="references" href="references.html">References</a><a data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a><a data-shell-key="terms" href="privacy-policy.html#terms-of-service">Terms of Service</a><a data-shell-key="news" href="earthquake-news.html">Earthquake News</a><a data-shell-key="contact" href="contact.html">Contact Us</a><a data-shell-key="map" href="earthquake-map.html">Earthquake Impact Map</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Copyright © 2026 QUAKE. All rights reserved. Student educational
+            website developed by the QUAKE Development Team.</span><span data-shell-key="motto">LEARN · PREPARE · TAKE ACTION</span>
+        </div>
+      </div>
+    </footer>
+    <div aria-live="polite" class="map-tooltip" hidden="" id="mapTooltip" role="status"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer="" src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  </body>
+</html>

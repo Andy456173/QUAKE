@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Us | QUAKE</title>
+
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="site-shell.css" rel="stylesheet">
+  <link href="Fav.png" rel="icon" type="image/png">
+  <script src="site-shell.js" defer></script>
+  <script src="new-page-translations.js" defer></script>
+</head>
+
+<body data-page="contact.html">
+  <header class="site-header" id="quakeHeader">
+      <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark" data-i18n-aria="navLabel">
+        <div class="container site-container quake-nav-shell">
+          <a aria-label="QUAKE homepage" class="navbar-brand brand-slot" href="index.html">
+            <img alt="QUAKE logo" class="brand-logo" src="PBL_Logo_trim.png"/>
+          </a>
+          <button aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHome" data-shell-key="home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navAbout" data-shell-key="about" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHistory" data-shell-key="history" href="earthquake-history.html">Earthquake History</a>
+              </li>
+              <li class="nav-item nav-item--with-language">
+                <a class="nav-link" data-i18n="navPreparedness" data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+                <div aria-label="Language selector" class="lang-picker">
+                  <button aria-expanded="false" aria-label="Change language" class="lang-button" type="button">
+                    <svg aria-hidden="true" class="language-icon" focusable="false" viewbox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                    </svg>
+                  </button>
+                  <div aria-label="Language options" class="lang-menu" role="menu">
+                    <button aria-checked="true" class="lang-option active" data-lang="en" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--gb" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#012169" height="16" width="24"></rect>
+                        <path d="M0 0h3.5L24 12.5V16h-3.5L0 3.5zM24 0h-3.5L0 12.5V16h3.5L24 3.5z" fill="#fff"></path>
+                        <path d="M0 0h1.7L24 13.6V16h-1.7L0 2.4zM24 0h-1.7L0 13.6V16h1.7L24 2.4z" fill="#c8102e"></path>
+                        <path d="M9 0h6v16H9zM0 5h24v6H0z" fill="#fff"></path>
+                        <path d="M10.2 0h3.6v16h-3.6zM0 6.2h24v3.6H0z" fill="#c8102e"></path></svg><span>English</span>
+                    </button>
+                    <button aria-checked="false" class="lang-option" data-lang="mm" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--mm" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#fecb00" height="5.34" width="24"></rect>
+                        <rect fill="#34b233" height="5.34" width="24" y="5.33"></rect>
+                        <rect fill="#ea2839" height="5.34" width="24" y="10.66"></rect>
+                        <path d="m12 2.8 2.1 4.25 4.7.68-3.4 3.32.8 4.68-4.2-2.2-4.2 2.2.8-4.68-3.4-3.32 4.7-.68z" fill="#fff"></path></svg><span>Myanmar</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <button aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="navMore" data-shell-key="more" id="moreMenu" type="button">
+                  More
+                </button>
+                <ul aria-labelledby="moreMenu" class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" data-i18n="navFaq" data-shell-key="faq" href="faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navReferences" data-shell-key="references" href="references.html">References</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navPrivacy" data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a>
+                  </li>
+                  <li><a class="dropdown-item" data-shell-key="news" href="earthquake-news.html">Earthquake News</a></li>
+                  <li><a aria-current="page" class="dropdown-item active" data-shell-key="contact" href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div aria-label="Historical earthquake fact" class="news-ticker">
+        <div class="news-ticker-track">
+          <span><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span><span aria-hidden="true"><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span>
+        </div>
+      </div>
+    </header>
+  <div class="contact-header">
+    <h1><span>CONTACT</span> US</h1>
+
+    <!-- Orange earthquake crack -->
+    <svg class="quake-line"
+         viewBox="0 0 750 100"
+         preserveAspectRatio="none"
+         aria-hidden="true">
+      <polygon points="
+        0,16 15,20 39,17 68,32 114,5 165,57 210,67
+        226,74 246,65 267,66 283,59 321,51 354,52
+        401,39 427,23 446,29 470,26 500,41 544,13
+        595,64 640,75 657,82 678,74 698,76 716,68 750,60
+        716,75 698,90 676,88 653,97 631,89 591,81
+        550,35 536,26 494,49 469,35 447,37 427,30
+        408,46 356,54 330,59 345,55 321,55 286,67
+        268,82 247,80 225,89 205,80 163,72 117,25
+        105,18 63,40 39,27 20,28 0,23">
+      </polygon>
+    </svg>
+  </div>
+
+  <main class="contact-container">
+
+    <div class="contact-row">
+
+      <!-- Left column -->
+      <section class="contact-info">
+        <h2>Get In Touch</h2>
+
+        <p class="intro">
+          Have a question about earthquake preparedness or our
+          QUAKE website? Our project team would love to hear from you.
+        </p>
+
+        <div class="detail">
+          <span class="contact-icon">
+            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+          </span>
+
+          <div>
+            <h3>Address</h3>
+            <p>
+              A-33, Padonmar Street, Thuwunna Ward 24,<br>
+              Thingangyun Township, Yangon
+            </p>
+          </div>
+        </div>
+
+        <div class="detail">
+          <span class="contact-icon">
+            <i class="bi bi-telephone" aria-hidden="true"></i>
+          </span>
+
+          <div>
+            <h3>Campus Contact Number</h3>
+            <a href="tel:+959966680222">09 9666 80222</a>
+          </div>
+        </div>
+
+        <div class="detail">
+          <span class="contact-icon">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+          </span>
+
+          <div>
+            <h3>Email</h3>
+            <p>Email address not yet available.</p>
+          </div>
+        </div>
+
+        <div class="follow">
+          <h3>Follow Us</h3>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/"
+               class="social-link"
+               aria-label="Facebook"
+               title="Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://discord.com/"
+               class="social-link"
+               aria-label="Discord"
+               title="Discord">
+              <i class="bi bi-discord" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.instagram.com/"
+               class="social-link"
+               aria-label="Instagram"
+               title="Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right column -->
+      <section class="message-card">
+        <h2>Send a Message</h2>
+
+        <p class="form-intro">
+          Do you have a question? Or need any help?
+          Feel free to contact us.
+        </p>
+
+        <p class="form-notice">This form is a demonstration and cannot send messages yet.</p>
+        <form id="contact-form">
+          <div class="name-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input
+                id="first-name"
+                name="firstName"
+                type="text"
+                placeholder="Enter your first name"
+                autocomplete="given-name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input
+                id="last-name"
+                name="lastName"
+                type="text"
+                placeholder="Enter your last name"
+                autocomplete="family-name"
+                required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder="Enter your message"
+              required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- Map -->
+    <section class="map-section">
+      <h2><span>FIND</span> US</h2>
+
+      <p>
+        EDUSN Thingangyun Campus · Thuwunna, Yangon
+      </p>
+
+      <iframe
+        class="campus-map"
+        title="Google Map showing EDUSN Thingangyun Campus"
+        src="https://maps.google.com/maps?q=EDUSN%20A-33%20Padonmar%20Street%20Thuwunna%20Thingangyun%20Yangon&amp;output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+
+      <a
+        class="map-link"
+        href="https://www.google.com/maps/search/?api=1&amp;query=EDUSN%20A-33%20Padonmar%20Street%20Thuwunna%20Thingangyun%20Yangon"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+        Open in Google Maps
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const statusText = document.getElementById("form-status");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      statusText.textContent =
+        "This is a demo form. Your message has not been sent.";
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="site-footer" id="site-footer">
+      <div class="container site-container">
+        <div class="row gy-3 footer-columns">
+          <div class="col-md-4">
+            <a aria-label="QUAKE homepage" class="footer-brand-slot" href="index.html">
+              <img alt="QUAKE logo" class="footer-brand-logo" src="PBL_Logo_trim.png"/>
+            </a>
+            <p>
+              QUAKE is a student-led educational website about historical
+              earthquakes and disaster risk reduction in Myanmar.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 data-shell-key="quick">QUICK LINKS</h3>
+            <a data-shell-key="home" href="index.html">Home</a><a data-shell-key="about" href="about.html">About Us</a><a data-shell-key="history" href="earthquake-history.html">Earthquake History</a><a data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+          </div>
+          <div class="col-6 col-md-5 footer-help">
+            <h3 data-shell-key="help">HELP &amp; PRIVACY</h3>
+            <a data-shell-key="faq" href="faq.html">FAQ</a><a data-shell-key="references" href="references.html">References</a><a data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a><a data-shell-key="terms" href="privacy-policy.html#terms-of-service">Terms of Service</a><a data-shell-key="news" href="earthquake-news.html">Earthquake News</a><a data-shell-key="contact" href="contact.html">Contact Us</a><a data-shell-key="map" href="earthquake-map.html">Earthquake Impact Map</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Copyright © 2026 QUAKE. All rights reserved. Student educational
+            website developed by the QUAKE Development Team.</span><span data-shell-key="motto">LEARN · PREPARE · TAKE ACTION</span>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

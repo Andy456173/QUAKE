@@ -1,0 +1,246 @@
+/* QUAKE | dark documentation pages only. Main homepage, history and map remain unchanged. */
+.faq-page,
+.privacy-page,
+.references-page {
+  background: #0d1012 !important;
+  color: #f1f3f4 !important;
+  --orange-deep: #ff9b4c;
+  --ref-orange-deep: #ff9b4c;
+  --ref-cream: #0f1214;
+}
+.faq-page .faq-directory,
+.privacy-page .privacy-content,
+.references-page .ref-library {
+  background: #0f1214 !important;
+  color: #edf1f2 !important;
+}
+.faq-page .faq-intro-row,
+.references-page .ref-intro-row {
+  border-color: #313638;
+}
+.faq-page .faq-intro-title,
+.faq-page .faq-group-head h3,
+.faq-page .faq-no-results h3,
+.privacy-page .privacy-card h2,
+.privacy-page .privacy-summary p strong,
+.references-page .ref-intro-row h2,
+.references-page .ref-group-heading h3,
+.references-page .ref-no-results h3 {
+  color: #f0f3f5 !important;
+}
+.faq-page .faq-intro-row p,
+.faq-page .faq-search-label,
+.faq-page .faq-sidebar > h3,
+.faq-page .faq-results-bar,
+.faq-page .faq-section-count,
+.faq-page .faq-item-num,
+.privacy-page .privacy-summary p,
+.privacy-page .privacy-updated,
+.privacy-page .privacy-sidebar p,
+.privacy-page .privacy-card p,
+.references-page .ref-intro-row p,
+.references-page .ref-search-wrap label,
+.references-page .ref-sidebar > h3,
+.references-page .ref-description,
+.references-page .ref-results-bar,
+.references-page .ref-section-count {
+  color: #abb5bb !important;
+}
+.faq-page .faq-intro-row,
+.faq-page .faq-group-head {
+  border-color: #303639;
+}
+.faq-page .faq-search-field,
+.references-page .ref-search-box {
+  background: #1c2225 !important;
+  border-color: #364248 !important;
+}
+.faq-page .faq-search-field input,
+.references-page .ref-search-box input {
+  color: #f4f8fa !important;
+}
+.faq-page .faq-search-field input::placeholder,
+.references-page .ref-search-box input::placeholder {
+  color: #8f9da5;
+}
+.faq-page .faq-sidebar-note,
+.references-page .ref-sidebar-card {
+  background: #1b2023;
+  border: 1px solid #353c40;
+}
+.faq-page .faq-filter,
+.references-page .ref-filter {
+  color: #c6cfd3 !important;
+  border-color: transparent;
+  background: transparent;
+}
+.faq-page .faq-filter:hover,
+.references-page .ref-filter:hover {
+  background: #202629 !important;
+  color: #ffab68 !important;
+}
+.faq-page .faq-filter.is-active,
+.references-page .ref-filter.is-active {
+  background: #242b2e !important;
+  border-color: #3b474e !important;
+  border-left: 3px solid #f57a20 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.faq-page .faq-item,
+.privacy-page .privacy-card,
+.references-page .ref-card {
+  background: #1a1f22 !important;
+  border: 1px solid #343c40 !important;
+  box-shadow: 0 9px 26px #00000024 !important;
+}
+.faq-page .faq-item:hover,
+.privacy-page .privacy-card:hover,
+.references-page .ref-card:hover {
+  border-color: #b87846 !important;
+  box-shadow: 0 13px 25px #00000044 !important;
+}
+.faq-page .faq-item summary,
+.references-page .ref-card h4 {
+  color: #f4f5f6 !important;
+}
+.faq-page .faq-answer,
+.faq-page .faq-answer p,
+.privacy-page .privacy-card p,
+.references-page .ref-description,
+.references-page .ref-citation p {
+  color: #bec6ca !important;
+}
+.faq-page .faq-answer strong {
+  color: #fff !important;
+}
+.faq-page .faq-answer p,
+.references-page .ref-card-actions {
+  border-color: #353b40 !important;
+}
+.faq-page .faq-plus {
+  background: #283137 !important;
+  border-color: #455157 !important;
+}
+.faq-page .faq-plus:before,
+.faq-page .faq-plus:after {
+  background: #cad2d6;
+}
+.faq-page .faq-item[open] .faq-plus {
+  background: #f57a20;
+  border-color: #f57a20;
+}
+.faq-page .faq-item[open] .faq-plus:before,
+.faq-page .faq-item[open] .faq-plus:after {
+  background: #fff;
+}
+.faq-page .faq-no-results,
+.references-page .ref-no-results {
+  background: #1b2023 !important;
+  border-color: #485057 !important;
+  color: #f4f5f6;
+}
+.privacy-page .privacy-summary {
+  background: #202529 !important;
+  border-color: #5b4535 !important;
+  box-shadow: none !important;
+}
+.privacy-page .privacy-sidebar a {
+  color: #bec7cb !important;
+  border-color: #43494c !important;
+}
+.privacy-page .privacy-sidebar a:hover,
+.privacy-page .privacy-sidebar a.active {
+  color: #ff9b4c !important;
+  border-color: #f57a20 !important;
+}
+.privacy-page .privacy-contact {
+  background: #191d20;
+  border-color: #30383d;
+}
+.references-page .ref-source-logo {
+  background: #2b3439;
+  color: #e8edef;
+}
+.references-page .ref-citation {
+  background: #111618 !important;
+  border: 1px solid #30393e;
+}
+.references-page .ref-citation span,
+.references-page .ref-year {
+  color: #b2bec4 !important;
+}
+.references-page .ref-copy {
+  color: #c4cfd4 !important;
+}
+.references-page .ref-visit {
+  color: #ff9d52 !important;
+}
+.references-page .ref-final-panel,
+.faq-page .faq-step {
+  background: #1b2023 !important;
+  border-color: #333a40 !important;
+}
+.references-page .ref-sidebar,
+.references-page .ref-results-bar,
+.privacy-page .privacy-sidebar {
+  color: #d2d9dc;
+}
+/* Orange remains clear against dark backgrounds */
+.faq-page .faq-section-index,
+.faq-page .faq-group-head h3 span,
+.faq-page .faq-item[open] .faq-item-num,
+.faq-page .faq-reset,
+.privacy-page .privacy-section-number,
+.privacy-page .privacy-updated strong,
+.references-page .ref-section-index,
+.references-page .ref-group-heading h3 span,
+.references-page .ref-type {
+  color: #ff9950 !important;
+}
+@media (max-width: 767.98px) {
+  .faq-page .faq-directory,
+  .privacy-page .privacy-content,
+  .references-page .ref-library {
+    padding-top: 52px;
+    padding-bottom: 65px;
+  }
+  .faq-page .faq-search-wrap,
+  .references-page .ref-search-wrap {
+    min-width: 0;
+  }
+  .privacy-page .privacy-summary {
+    flex-wrap: wrap;
+  }
+}
+/* Prevent long editorial headings from forcing a flex item wider than the phone. */
+@media (max-width: 575.98px) {
+  .faq-page .faq-hero-inner,
+  .references-page .ref-hero-layout {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+  }
+  .faq-page .faq-hero-copy,
+  .references-page .ref-hero-text {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  .faq-page .faq-hero h1 {
+    font-size: clamp(46px, 11vw, 63px) !important;
+    overflow-wrap: normal;
+    max-width: 100%;
+  }
+  .references-page .ref-hero h1 {
+    font-size: clamp(52px, 12vw, 67px) !important;
+    max-width: 100%;
+  }
+  .faq-page .faq-hero-description,
+  .references-page .ref-hero-description {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}

@@ -1,0 +1,358 @@
+/* General page settings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Heading and earthquake crack */
+.contact-header {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  margin: 0;
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+.contact-header h1 span,
+.map-section h2 span {
+  color: #f57a20;
+}
+
+.quake-line {
+  display: block;
+  width: 100%;
+  height: 115px;
+  margin-top: 30px;
+  fill: #f57a20;
+}
+
+/* Main content width */
+.contact-container {
+  width: min(90%, 1000px);
+  margin: 60px auto 70px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 7.5%;
+  align-items: start;
+}
+
+/* Left column */
+.contact-info {
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.contact-info h2 {
+  margin: 0 0 18px;
+  font-size: 25px;
+}
+
+.intro {
+  margin: 0 0 30px;
+  color: #cbd0d3;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+/* Flex centres every Bootstrap icon inside its circle */
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f57a20;
+}
+
+.contact-icon i {
+  display: flex;
+  font-size: 27px;
+}
+
+.detail h3,
+.follow h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+}
+
+.detail p,
+.detail a {
+  margin: 0;
+  color: #cbd0d3;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.detail a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.follow {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #d6d0c8;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #f57a20;
+  color: #fff;
+  font-size: 17px;
+}
+
+.social-link i {
+  display: flex;
+}
+
+.social-link:hover {
+  background: #dc6700;
+}
+
+/* White form card */
+.message-card {
+  min-width: 0;
+  padding: 38px 32px 30px;
+  border-radius: 30px;
+  background: #fff;
+  color: #191919;
+}
+
+.message-card h2 {
+  margin: 0 0 12px;
+  color: #f5670a;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.form-intro {
+  margin: 0 0 20px;
+  color: #666;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Form fields */
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  min-width: 0;
+  margin-bottom: 17px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #191919;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+input {
+  height: 30px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+textarea {
+  min-height: 60px;
+  padding: 11px 12px;
+  border-radius: 9px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+/* Clear keyboard focus */
+input:focus,
+textarea:focus {
+  border-color: #f57a20;
+  outline: 2px solid #ffd5b7;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffb47e;
+  outline-offset: 4px;
+}
+
+/* Submit button */
+#contact-form button[type="submit"] {
+  display: block;
+  width: 120px;
+  height: 42px;
+  margin: 21px 0 0 auto;
+  border: 0;
+  border-radius: 25px;
+  background: #f57a20;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background: #dc6700;
+}
+
+#form-status {
+  margin: 14px 0 0;
+  color: #555;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#form-status:empty {
+  display: none;
+}
+
+/* Campus map */
+.map-section {
+  margin-top: 65px;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.map-section p {
+  margin: 0 0 24px;
+  color: #cbd0d3;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.campus-map {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: 1px solid #f57a20;
+  border-radius: 18px;
+  background: #191919;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: 1px solid #f57a20;
+  border-radius: 25px;
+  color: #dc6700;
+  font-size: 13px;
+}
+
+.map-link:hover {
+  background: #f57a20;
+  color: #101214;
+}
+
+/* Tablet and phone layout */
+@media (max-width: 700px) {
+  .contact-header {
+    padding-top: 40px;
+  }
+
+  .quake-line {
+    height: 80px;
+    margin-top: 25px;
+  }
+
+  .contact-container {
+    width: calc(100% - 36px);
+    margin-top: 40px;
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .message-card {
+    padding: 28px 22px;
+  }
+
+  .map-section {
+    margin-top: 45px;
+  }
+
+  .campus-map {
+    height: clamp(240px, 72vw, 300px);
+  }
+}
+
+@media (max-width: 380px) {
+  .name-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .message-card {
+    padding: 24px 18px;
+  }
+}
+/* Match the typography and accent used throughout QUAKE. */
+body { font-family: "DM Sans", "Noto Sans Myanmar", Arial, sans-serif; }
+main h1, main h2, .contact-header h1 { font-family: "Barlow Condensed", "Noto Sans Myanmar", sans-serif; }
+html[lang="my"] body, html[lang="my"] main h1, html[lang="my"] main h2 { font-family: "Noto Sans Myanmar", "DM Sans", sans-serif; line-height: 1.6; }

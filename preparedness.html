@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="QUAKE's practical earthquake preparedness guide for Myanmar. Explore simple actions, emergency supplies and safety steps."/>
+  <title>Earthquake Preparedness | QUAKE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="preparedness.css" rel="stylesheet"/>
+  <script src="preparedness.js" defer></script>
+  <link href="site-shell.css" rel="stylesheet">
+  <link href="Fav.png" rel="icon" type="image/png">
+  <script src="site-shell.js" defer></script>
+  <script src="new-page-translations.js" defer></script>
+</head>
+<body data-page="preparedness.html">
+<header class="site-header" id="quakeHeader">
+      <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark" data-i18n-aria="navLabel">
+        <div class="container site-container quake-nav-shell">
+          <a aria-label="QUAKE homepage" class="navbar-brand brand-slot" href="index.html">
+            <img alt="QUAKE logo" class="brand-logo" src="PBL_Logo_trim.png"/>
+          </a>
+          <button aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHome" data-shell-key="home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navAbout" data-shell-key="about" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-i18n="navHistory" data-shell-key="history" href="earthquake-history.html">Earthquake History</a>
+              </li>
+              <li class="nav-item nav-item--with-language">
+                <a aria-current="page" class="nav-link active" data-i18n="navPreparedness" data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+                <div aria-label="Language selector" class="lang-picker">
+                  <button aria-expanded="false" aria-label="Change language" class="lang-button" type="button">
+                    <svg aria-hidden="true" class="language-icon" focusable="false" viewbox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                    </svg>
+                  </button>
+                  <div aria-label="Language options" class="lang-menu" role="menu">
+                    <button aria-checked="true" class="lang-option active" data-lang="en" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--gb" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#012169" height="16" width="24"></rect>
+                        <path d="M0 0h3.5L24 12.5V16h-3.5L0 3.5zM24 0h-3.5L0 12.5V16h3.5L24 3.5z" fill="#fff"></path>
+                        <path d="M0 0h1.7L24 13.6V16h-1.7L0 2.4zM24 0h-1.7L0 13.6V16h1.7L24 2.4z" fill="#c8102e"></path>
+                        <path d="M9 0h6v16H9zM0 5h24v6H0z" fill="#fff"></path>
+                        <path d="M10.2 0h3.6v16h-3.6zM0 6.2h24v3.6H0z" fill="#c8102e"></path></svg><span>English</span>
+                    </button>
+                    <button aria-checked="false" class="lang-option" data-lang="mm" role="menuitemradio" type="button">
+                      <svg aria-hidden="true" class="flag flag--mm" focusable="false" viewbox="0 0 24 16">
+                        <rect fill="#fecb00" height="5.34" width="24"></rect>
+                        <rect fill="#34b233" height="5.34" width="24" y="5.33"></rect>
+                        <rect fill="#ea2839" height="5.34" width="24" y="10.66"></rect>
+                        <path d="m12 2.8 2.1 4.25 4.7.68-3.4 3.32.8 4.68-4.2-2.2-4.2 2.2.8-4.68-3.4-3.32 4.7-.68z" fill="#fff"></path></svg><span>Myanmar</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <button aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-i18n="navMore" data-shell-key="more" id="moreMenu" type="button">
+                  More
+                </button>
+                <ul aria-labelledby="moreMenu" class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" data-i18n="navFaq" data-shell-key="faq" href="faq.html">FAQ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navReferences" data-shell-key="references" href="references.html">References</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-i18n="navPrivacy" data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a>
+                  </li>
+                  <li><a class="dropdown-item" data-shell-key="news" href="earthquake-news.html">Earthquake News</a></li>
+                  <li><a class="dropdown-item" data-shell-key="contact" href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div aria-label="Historical earthquake fact" class="news-ticker">
+        <div class="news-ticker-track">
+          <span><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span><span aria-hidden="true"><strong>28 MAR 2025</strong> A magnitude 7.7 earthquake struck
+            central Myanmar near Mandalay and Sagaing.</span>
+        </div>
+      </div>
+    </header>
+  <a class="skip-link" href="#guide">Skip to the guide</a>
+
+
+  <main>
+    <!-- WELCOMING -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="preparedness-hero-photo" aria-hidden="true">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2025_Myanmar_earthquake_damage_in_Mandalay.png?width=1400" alt="" fetchpriority="high"/>
+      </div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="breadcrumb"><a href="index.html">HOME</a><span>/</span> SAFETY GUIDE</div>
+          <p class="overline"><span class="orange-dot"></span> EARTHQUAKE PREPAREDNESS</p>
+          <h1 id="heroTitle">Be ready.<br/><em>Before it shakes.</em></h1>
+          <p class="hero-intro">Earthquake safety doesn't have to be complicated. Explore the essentials, choose your situation, and create a plan that works for you.</p>
+          <div class="hero-actions">
+            <a class="button button-orange" href="#guide">Explore the guide <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="#during">If shaking starts <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-caption"><span class="hero-caption-line"></span> FOR HOMES · SCHOOLS · COMMUNITIES IN MYANMAR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE DIRECT PATHS -->
+    <section class="path-section" aria-labelledby="pathsTitle">
+      <div class="wrap">
+        <div class="path-header">
+          <div>
+            <span class="overline">START WHERE YOU ARE</span>
+            <h2 id="pathsTitle">What do you need to know?</h2>
+          </div>
+          <p>Choose a stage to jump straight to the advice.</p>
+        </div>
+        <div class="path-grid">
+          <a class="path-card path-before" href="#prepare">
+            <span class="path-number">01 / BEFORE</span>
+            <span class="path-symbol" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_37174_-_Emergency_Preparedness_%22ready_to_go%22_kit..jpg?width=800" alt="" loading="lazy"></span>
+            <strong>Get prepared.</strong>
+            <span class="path-description">Make your space and family safer.</span>
+            <span class="path-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="path-card path-during" href="#during">
+            <span class="path-number">02 / DURING</span>
+            <span class="path-symbol" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earthquake_drill_in_TCNHS.jpg?width=800" alt="" loading="lazy"></span>
+            <strong>Stay protected.</strong>
+            <span class="path-description">Take action the moment shaking begins.</span>
+            <span class="path-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="path-card path-after" href="#after">
+            <span class="path-number">03 / AFTER</span>
+            <span class="path-symbol" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Going_to_the_evacuation_site_%2848915144171%29.jpg?width=800" alt="" loading="lazy"></span>
+            <strong>Stay safe next.</strong>
+            <span class="path-description">Check hazards and reconnect safely.</span>
+            <span class="path-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN GUIDE -->
+    <div class="wrap guide-layout" id="guide">
+      <aside class="guide-sidebar" aria-label="Preparedness guide navigation">
+        <div class="guide-sidebar-heading">
+          <span class="overline">ON THIS PAGE</span>
+          <strong>Explore the guide</strong>
+        </div>
+        <label class="search-label" for="guideSearch">Looking for something?</label>
+        <div class="search-wrap">
+          <input id="guideSearch" type="search" placeholder="Search a topic..." autocomplete="off" aria-controls="searchResults"/>
+          <span aria-hidden="true"></span>
+        </div>
+        <div class="search-results" id="searchResults" aria-live="polite" hidden></div>
+        <nav class="topic-links" id="topicLinks" aria-label="Guide sections">
+          <a href="#prepare"><span>01</span> Prepare your space</a>
+          <a href="#kits"><span>02</span> Emergency kits</a>
+          <a href="#during"><span>03</span> During shaking</a>
+          <a href="#situations"><span>04</span> Different situations</a>
+          <a href="#access"><span>05</span> Accessible safety</a>
+          <a href="#after"><span>06</span> After shaking</a>
+          <a href="#checklist"><span>07</span> Readiness checklist</a>
+          <a href="#questions"><span>08</span> Questions &amp; sources</a>
+        </nav>
+        <a class="sidebar-note" href="#checklist"><span>YOUR NEXT STEP</span><strong>Turn the guide into a plan.</strong><b>Open checklist →</b></a>
+      </aside>
+
+      <div class="guide-content">
+        <!-- PREPARE -->
+        <section class="guide-section searchable" id="prepare" aria-labelledby="prepareTitle">
+          <div class="section-title-group">
+            <span class="overline">01 / BEFORE AN EARTHQUAKE</span>
+            <h2 id="prepareTitle">Four small steps.<br/><em>A stronger start.</em></h2>
+            <p class="section-description">Start with these four essentials. Open a card when you want the full guidance.</p>
+          </div>
+          <div class="preparation-grid">
+            <article class="prep-card">
+              <div class="prep-card-head"><span class="prep-icon" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2025_Myanmar_earthquake_damage_in_Mandalay.png?width=800" alt="" loading="lazy"></span><span class="prep-index">01</span></div>
+              <h3>Secure your space.</h3>
+              <p>Reduce the things that can fall, break or block your exit.</p>
+              <div class="mini-tags"><span>FURNITURE</span><span>EXITS</span></div>
+              <details class="card-details">
+                <summary>See what to check</summary>
+                <div class="detail-body">
+                  <ul>
+                    <li>Move heavy objects to lower shelves and away from beds, sofas and desks.</li>
+                    <li>Check bookcases, televisions, mirrors, hanging lights and large appliances.</li>
+                    <li>Ask an adult or qualified installer to secure tall furniture with suitable wall fixings.</li>
+                    <li>Keep corridors, stairs and exits clear. Know where sturdy tables and desks are.</li>
+                    <li>Store household chemicals safely. Have competent adults check LPG and heavy appliances.</li>
+                  </ul>
+                  <p>Suspect structural damage? Ask a qualified engineer. Do not attempt structural or utility repairs yourself.</p>
+                </div>
+              </details>
+            </article>
+            <article class="prep-card">
+              <div class="prep-card-head"><span class="prep-icon" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/August_2007,_emergency_exercise_in_Ginza_10.jpg?width=800" alt="" loading="lazy"></span><span class="prep-index">02</span></div>
+              <h3>Make a family plan.</h3>
+              <p>Everyone should know where to go and how to reconnect.</p>
+              <div class="mini-tags"><span>MEETING PLACE</span><span>CONTACTS</span></div>
+              <details class="card-details">
+                <summary>Build your plan</summary>
+                <div class="detail-body">
+                  <ul>
+                    <li>Choose a nearby safe meeting spot and a second one outside your neighbourhood.</li>
+                    <li>Pick a trusted contact outside your area. Write their number on a paper card.</li>
+                    <li>Plan accessible routes, a backup route and support for older people, children and pets.</li>
+                    <li>Ask schools about attendance, family contact and authorised pickup arrangements.</li>
+                    <li>Practise a short message: “I'm safe. I'm at ___. I'm with ___.”</li>
+                  </ul>
+                  <p>Keep a paper route sketch and contact card with your supplies, without exposing personal details publicly.</p>
+                </div>
+              </details>
+            </article>
+            <article class="prep-card">
+              <div class="prep-card-head"><span class="prep-icon" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Standard_First_Aid_Kit_and_Essential_Emergency_Medical_Supplies_01.jpg?width=800" alt="" loading="lazy"></span><span class="prep-index">03</span></div>
+              <h3>Gather essentials.</h3>
+              <p>Keep useful supplies nearby, not necessarily expensive supplies.</p>
+              <div class="mini-tags"><span>WATER</span><span>MEDICINE</span></div>
+              <details class="card-details">
+                <summary>What matters most?</summary>
+                <div class="detail-body">
+                  <ul>
+                    <li>Prioritise safe water, food, torches, batteries, a power bank and a first-aid kit.</li>
+                    <li>Include prescribed medicines, medical lists and individual accessibility needs.</li>
+                    <li>Keep sturdy closed shoes and a torch beside the bed.</li>
+                    <li>Check expiry dates and recharge equipment regularly.</li>
+                  </ul>
+                  <p>For a printable-style supply list, explore the three kit options below.</p>
+                  <a class="inline-link" href="#kits">Compare emergency kits →</a>
+                </div>
+              </details>
+            </article>
+            <article class="prep-card">
+              <div class="prep-card-head"><span class="prep-icon" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/U_S_Airmen_conduct_an_emergency_response_training_exercise_%288441992%29.jpg?width=800" alt="" loading="lazy"></span><span class="prep-index">04</span></div>
+              <h3>Learn &amp; practise.</h3>
+              <p>A calm drill helps your household remember what to do.</p>
+              <div class="mini-tags"><span>DRILLS</span><span>FIRST AID</span></div>
+              <details class="card-details">
+                <summary>Try a safe practice</summary>
+                <div class="detail-body">
+                  <ol>
+                    <li>Explain the drill beforehand and choose a clear, safe space.</li>
+                    <li>Practise Drop, Cover and Hold On, adapting for different mobility needs.</li>
+                    <li>After the imaginary shaking, discuss exits, meeting places and who needs help.</li>
+                    <li>Learn first aid and CPR with a recognised instructor.</li>
+                    <li>Review and repeat the plan when household circumstances change.</li>
+                  </ol>
+                  <p>Never shake furniture, create smoke, block exits or surprise people with frightening drills.</p>
+                </div>
+              </details>
+            </article>
+          </div>
+          <div class="soft-tip"><span aria-hidden="true">✦</span><p><strong>Focus on one room first.</strong> The place where you sleep or study is a useful place to begin.</p></div>
+        </section>
+
+        <!-- KIT CARDS -->
+        <section class="guide-section searchable" id="kits" aria-labelledby="kitsTitle">
+          <div class="section-title-group">
+            <span class="overline">02 / BUILD YOUR SUPPLIES</span>
+            <h2 id="kitsTitle">Your kit. <em>Your needs.</em></h2>
+            <p class="section-description">Tap a kit to see what belongs inside. Begin with supplies you already have and build up over time.</p>
+          </div>
+          <div class="kit-selector" role="tablist" aria-label="Choose an emergency kit">
+            <button type="button" class="kit-tab active" role="tab" id="tab-go" aria-selected="true" tabindex="0" aria-controls="panel-go" data-kit="go"><span>01</span> GO-KIT <small>Take with you</small></button>
+            <button type="button" class="kit-tab" role="tab" id="tab-home" aria-selected="false" tabindex="-1" aria-controls="panel-home" data-kit="home"><span>02</span> HOME KIT <small>Store at home</small></button>
+            <button type="button" class="kit-tab" role="tab" id="tab-bed" aria-selected="false" tabindex="-1" aria-controls="panel-bed" data-kit="bed"><span>03</span> BED KIT <small>Within reach</small></button>
+          </div>
+          <div class="kit-panel" id="panel-go" role="tabpanel" aria-labelledby="tab-go">
+            <div class="kit-overview"><span class="overline">GRAB AND GO</span><h3>A portable go-kit.</h3><p>Prepare essentials for leaving home. A common planning target is at least <strong>3 days of supplies</strong>, adjusted to your family's needs and what can safely be carried.</p><span class="kit-big-symbol" aria-hidden="true">03<span>DAYS</span></span></div>
+            <div class="kit-contents"><h4>What to include</h4><ul class="tick-list"><li>Drinking water and ready-to-eat food</li><li>Necessary medicines and a medication list</li><li>Torch, whistle, batteries and power bank</li><li>First-aid, hygiene and spare clothing</li><li>Copies of key documents and some cash</li></ul></div>
+          </div>
+          <div class="kit-panel" id="panel-home" role="tabpanel" aria-labelledby="tab-home" hidden>
+            <div class="kit-overview"><span class="overline">STAY READY AT HOME</span><h3>A larger home reserve.</h3><p>Where practical, work toward <strong>2 weeks of essentials</strong> in case water, power, shops or transport are disrupted. The supplies do not all need to fit in one bag.</p><span class="kit-big-symbol" aria-hidden="true">14<span>DAYS</span></span></div>
+            <div class="kit-contents"><h4>What to include</h4><ul class="tick-list"><li>Safe drinking water and long-lasting food</li><li>Manual can opener and eating utensils</li><li>Radio, lighting and spare batteries</li><li>Sanitation and hygiene supplies</li><li>Infant, disability and pet essentials</li></ul></div>
+          </div>
+          <div class="kit-panel" id="panel-bed" role="tabpanel" aria-labelledby="tab-bed" hidden>
+            <div class="kit-overview"><span class="overline">NIGHT-TIME READINESS</span><h3>Keep a small bed kit.</h3><p>Store these items next to or safely attached near your bed so they stay <strong>within reach</strong> even when furniture shifts.</p><span class="kit-big-symbol" aria-hidden="true">24<span>/ 7</span></span></div>
+            <div class="kit-contents"><h4>What to include</h4><ul class="tick-list"><li>Sturdy, closed-toe shoes</li><li>Torch and whistle</li><li>Glasses or daily mobility aids</li><li>A suitable dust mask</li><li>Essential personal items</li></ul></div>
+          </div>
+          <details class="extra-details">
+            <summary>Additional kit advice: medical needs, storage and expiry dates</summary>
+            <div class="detail-body"><p>Consider hearing-aid batteries, mobility-device charging, glasses and other communication aids. Ask your clinician or pharmacist about safe medicine reserves and storage needs. For medical equipment, plan backup power with the provider or care team.</p><p>Label a kit review date. Replace expired items safely, charge power banks, test torches and store water in clean, suitable containers. Keep sensitive documents protected.</p></div>
+          </details>
+        </section>
+      </div>
+    </div>
+
+    <!-- IMMEDIATE ACTION -->
+    <section class="during-section searchable" id="during" aria-labelledby="duringTitle">
+      <div class="wrap">
+        <div class="during-heading">
+          <div><span class="overline">03 / IF SHAKING BEGINS</span><h2 id="duringTitle">DROP. COVER.<br/><em>HOLD ON.</em></h2></div>
+          <p>Protect yourself right away. In most indoor situations, stay inside and use nearby cover. Don't run outside during the shaking.</p>
+        </div>
+        <div class="action-steps">
+          <article><span class="action-number">01</span><h3>DROP</h3><p>Get onto your hands and knees so you are less likely to fall.</p></article>
+          <article><span class="action-number">02</span><h3>COVER</h3><p>Get beneath a sturdy nearby desk or table and shield your head and neck.</p></article>
+          <article><span class="action-number">03</span><h3>HOLD ON</h3><p>Hold the shelter and stay protected until the shaking stops.</p></article>
+        </div>
+        <div class="during-note"><strong>NO TABLE NEARBY?</strong><span>Stay low, away from windows and falling objects, and protect your head and neck with your arms.</span></div>
+      </div>
+    </section>
+
+    <div class="wrap lower-content">
+      <!-- SITUATION CHOOSER -->
+      <section class="wide-section searchable" id="situations" aria-labelledby="situationsTitle">
+        <div class="section-title-group center-title">
+          <span class="overline">04 / DIFFERENT PLACES, DIFFERENT ACTIONS</span>
+          <h2 id="situationsTitle">Where are you <em>right now?</em></h2>
+          <p class="section-description">Choose a situation to see the most relevant steps. These are general guidelines; always follow local emergency instructions.</p>
+        </div>
+        <div class="scenario-tabs" role="tablist" aria-label="Where are you during shaking?">
+          <button type="button" class="scenario-tab active" role="tab" id="place-tab-inside" aria-controls="place-inside" aria-selected="true" tabindex="0" data-place="inside">At home / school</button>
+          <button type="button" class="scenario-tab" role="tab" id="place-tab-bed" aria-controls="place-bed" aria-selected="false" tabindex="-1" data-place="bed">In bed</button>
+          <button type="button" class="scenario-tab" role="tab" id="place-tab-outside" aria-controls="place-outside" aria-selected="false" tabindex="-1" data-place="outside">Outside / crowded</button>
+          <button type="button" class="scenario-tab" role="tab" id="place-tab-car" aria-controls="place-car" aria-selected="false" tabindex="-1" data-place="car">In a car</button>
+          <button type="button" class="scenario-tab" role="tab" id="place-tab-coast" aria-controls="place-coast" aria-selected="false" tabindex="-1" data-place="coast">Near the coast</button>
+        </div>
+        <div class="scenario-panel" role="tabpanel" id="place-inside" aria-labelledby="place-tab-inside"><div class="scenario-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-8h6v8"/></svg></div><div><span class="overline">INDOORS</span><h3>Stay inside. Find cover.</h3><p>Move only a short distance away from glass or unstable objects. Drop under a sturdy nearby desk or table. Do not use lifts, rush outside or stand in a doorway. In a classroom, follow the teacher's practised routine.</p></div></div>
+        <div class="scenario-panel" role="tabpanel" id="place-bed" aria-labelledby="place-tab-bed" hidden><div class="scenario-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><span class="overline">IN BED</span><h3>Stay in bed. Protect your head.</h3><p>Cover your head and neck with a pillow and remain there until shaking stops. Avoid stepping onto possible broken glass. Put on sturdy shoes before walking afterward.</p></div></div>
+        <div class="scenario-panel" role="tabpanel" id="place-outside" aria-labelledby="place-tab-outside" hidden><div class="scenario-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"/></svg></div><div><span class="overline">OUTSIDE OR IN A CROWD</span><h3>Stay out of falling-object zones.</h3><p>Outside, move to a nearby clear space away from buildings, trees and power lines; get low and shield your head. In a crowded indoor venue, do not rush for an exit. Protect yourself in place until shaking stops.</p></div></div>
+        <div class="scenario-panel" role="tabpanel" id="place-car" aria-labelledby="place-tab-car" hidden><div class="scenario-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></div><div><span class="overline">IN A VEHICLE</span><h3>Pull over safely.</h3><p>The driver should stop away from bridges, overhead wires and other hazards. Set the parking brake, keep seatbelts fastened and stay inside until shaking stops. If a power line lands on the vehicle, remain inside and wait for trained help.</p></div></div>
+        <div class="scenario-panel" role="tabpanel" id="place-coast" aria-labelledby="place-tab-coast" hidden><div class="scenario-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><span class="overline">NEAR THE COAST</span><h3>Be aware of tsunami danger.</h3><p>Protect yourself while the ground shakes. After strong or prolonged coastal shaking, promptly move inland or to higher ground along the local tsunami evacuation route. Do not wait to see a wave; follow official warnings.</p></div></div>
+      </section>
+
+      <!-- ACCESSIBILITY -->
+      <section class="wide-section searchable" id="access" aria-labelledby="accessTitle">
+        <div class="section-title-group split-title"><div><span class="overline">05 / INCLUSIVE PREPAREDNESS</span><h2 id="accessTitle">Safety should work<br/><em>for everyone.</em></h2></div><p class="section-description">The safest movement may be different for each person. Do not force a position that could cause a fall. Discuss and practise suitable steps in advance.</p></div>
+        <div class="access-cards">
+          <details class="access-card">
+            <summary><span class="access-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span><strong>Using a cane</strong><small>Practical alternatives</small></span><span class="access-plus" aria-hidden="true">+</span></summary>
+            <div class="detail-body"><p>If possible, Drop, Cover and Hold On. Otherwise, sit safely on a nearby chair or bed and shield your head and neck with both hands. Keep your cane nearby.</p></div>
+          </details>
+          <details class="access-card">
+            <summary><span class="access-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><strong>Walker or wheelchair</strong><small>Lock, cover and hold</small></span><span class="access-plus" aria-hidden="true">+</span></summary>
+            <div class="detail-body"><p>Lock wheels if applicable. Remain seated in a wheelchair, or sit on a walker's seat when available. Shield your head and neck with your arms, a book or pillow and hold on. Do not attempt a risky transfer to the floor.</p><p>Agree on how support people can help without pulling someone from their equipment.</p></div>
+          </details>
+          <details class="access-card">
+            <summary><span class="access-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"/></svg></span><span><strong>Hearing, vision or communication needs</strong><small>Keep support accessible</small></span><span class="access-plus" aria-hidden="true">+</span></summary>
+            <div class="detail-body"><p>Keep glasses, hearing aids, batteries, mobility devices and communication aids within reach. Agree on clear visual, written or touch-based alerts that suit individual preferences. Plan accessible routes, backup assistance and equipment charging.</p><p>Always ask what assistance a person wants instead of assuming.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 08. AFTER SHAKING -->
+      <section class="wide-section searchable" id="after" aria-labelledby="afterTitle">
+        <div class="section-title-group"><span class="overline">06 / AFTER THE SHAKING</span><h2 id="afterTitle">The shaking stops.<br/><em>Safety continues.</em></h2><p class="section-description">Take these actions in order, as conditions allow. Expect aftershocks and changing hazards.</p></div>
+        <div class="after-grid">
+          <article class="after-card"><span>01</span><h3>Check people.</h3><p>Look for injuries, wear sturdy shoes near debris and provide first aid only within your training.</p></article>
+          <article class="after-card"><span>02</span><h3>Check the building.</h3><p>Leave damaged spaces carefully when safe. Use stairs, avoid unstable walls and do not re-enter until cleared.</p></article>
+          <article class="after-card"><span>03</span><h3>Watch for hazards.</h3><p>Stay away from fallen wires. If you smell gas, leave; avoid flames and switches. Let trained people handle utilities.</p></article>
+          <article class="after-card"><span>04</span><h3>Reconnect.</h3><p>Send a brief message, use your meeting plan, preserve battery power and follow reliable official updates.</p></article>
+        </div>
+        <div class="after-notes"><div class="alert-note"><span aria-hidden="true">!</span><div><strong>Another shake?</strong><p>Drop, Cover and Hold On again. Aftershocks can damage already weakened structures.</p></div></div><div class="alert-note"><span aria-hidden="true">!</span><div><strong>If trapped</strong><p>Protect your nose and mouth from dust. Signal by tapping, whistling or texting if possible. Avoid unnecessary movement.</p></div></div></div>
+      </section>
+
+      <!-- PROGRESS CHECKLIST -->
+      <section class="wide-section checklist-section searchable" id="checklist" aria-labelledby="checklistTitle">
+        <div class="section-title-group center-title"><span class="overline">07 / TURN LEARNING INTO ACTION</span><h2 id="checklistTitle">Ready, <em>one step at a time.</em></h2><p class="section-description">Tick each task as you finish it. Your progress is saved on this browser when local storage is available.</p></div>
+        <div class="checklist-box">
+          <div class="checklist-top"><div><span class="overline">YOUR READINESS PROGRESS</span><strong id="checkCount" role="status">0 / 12 completed</strong></div><div class="progress-meta"><span id="checkPercent">0%</span><span>READINESS CHECK</span></div></div>
+          <progress id="checkProgress" value="0" max="12" aria-label="Completed readiness tasks"></progress>
+          <div class="checklist-filter" aria-label="Filter checklist tasks"><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All tasks</button><button type="button" class="filter-button" data-filter="todo" aria-pressed="false">To do</button><button type="button" class="filter-button" data-filter="done" aria-pressed="false">Completed</button></div>
+          <div class="checklist-items" id="checklistItems">
+            <label class="check-row"><input type="checkbox" id="task1"/><span>Find a safe cover spot in each main room.</span></label>
+            <label class="check-row"><input type="checkbox" id="task2"/><span>Move heavy and breakable items to safer positions.</span></label>
+            <label class="check-row"><input type="checkbox" id="task3"/><span>Arrange safe fixing of tall furniture with an adult.</span></label>
+            <label class="check-row"><input type="checkbox" id="task4"/><span>Clear exits and check accessible routes.</span></label>
+            <label class="check-row"><input type="checkbox" id="task5"/><span>Choose two family meeting places.</span></label>
+            <label class="check-row"><input type="checkbox" id="task6"/><span>Write down contacts and school pickup arrangements.</span></label>
+            <label class="check-row"><input type="checkbox" id="task7"/><span>Start a go-kit and home supply reserve.</span></label>
+            <label class="check-row"><input type="checkbox" id="task8"/><span>Keep shoes, a torch and daily aids by the bed.</span></label>
+            <label class="check-row"><input type="checkbox" id="task9"/><span>Plan needed medicines and disability, infant or pet supplies.</span></label>
+            <label class="check-row"><input type="checkbox" id="task10"/><span>Practise protective actions with the household.</span></label>
+            <label class="check-row"><input type="checkbox" id="task11"/><span>Learn first aid and identify trained utility support.</span></label>
+            <label class="check-row"><input type="checkbox" id="task12"/><span>Choose a date to review your plan and supplies.</span></label>
+          </div>
+          <p class="empty-filter" id="emptyFilter" hidden>No tasks in this category.</p>
+          <div class="checklist-bottom"><span id="storageNote">Only task checkmarks are saved; no personal details are collected.</span><div><button type="button" class="light-text-button" id="resetChecklist">Clear progress</button><button type="button" class="button button-orange" id="printButton">Print guide →</button></div></div>
+        </div>
+        <p class="checklist-disclaimer">This checklist helps you prepare. It does not guarantee safety or replace local emergency guidance.</p>
+      </section>
+
+     
+    </div>
+
+    <section class="wide-section searchable wrap" id="questions" aria-labelledby="questionsTitle">
+      <div class="section-title-group">
+        <span class="overline">08 / QUESTIONS &amp; SOURCES</span>
+        <h2 id="questionsTitle">Keep learning.</h2>
+        <p class="section-description">Explore answers and the sources behind this guide.</p>
+      </div>
+      <a class="button button-dark" href="faq.html">Frequently asked questions →</a>
+      <a class="button button-orange" href="references.html">View references →</a>
+      <p class="photo-credit">Earthquake drill photo by s5switch, via <a href="https://commons.wikimedia.org/wiki/File:Earthquake_drill_in_TCNHS.jpg" rel="noopener noreferrer" target="_blank">Wikimedia Commons</a>, licensed under <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener noreferrer" target="_blank">CC BY 3.0</a>.</p>
+    </section>
+
+    <section class="final-cta"><div class="wrap final-inner"><div><span class="overline">PREPARATION IS A SHARED RESPONSIBILITY</span><h2>One plan today.<br/><em>Stronger communities tomorrow.</em></h2></div><a class="button button-dark" href="#checklist">Start your checklist →</a></div></section>
+  </main>
+
+  <noscript><style>.kit-panel[hidden],.scenario-panel[hidden]{display:grid!important}.kit-selector,.scenario-tabs{display:none}</style><p class="noscript">The main guide works without JavaScript. All kit and situation guidance is shown below. Turn on JavaScript to use tabs and save your checklist.</p></noscript>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="site-footer" id="site-footer">
+      <div class="container site-container">
+        <div class="row gy-3 footer-columns">
+          <div class="col-md-4">
+            <a aria-label="QUAKE homepage" class="footer-brand-slot" href="index.html">
+              <img alt="QUAKE logo" class="footer-brand-logo" src="PBL_Logo_trim.png"/>
+            </a>
+            <p>
+              QUAKE is a student-led educational website about historical
+              earthquakes and disaster risk reduction in Myanmar.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 data-shell-key="quick">QUICK LINKS</h3>
+            <a data-shell-key="home" href="index.html">Home</a><a data-shell-key="about" href="about.html">About Us</a><a data-shell-key="history" href="earthquake-history.html">Earthquake History</a><a data-shell-key="preparedness" href="preparedness.html">Preparedness</a>
+          </div>
+          <div class="col-6 col-md-5 footer-help">
+            <h3 data-shell-key="help">HELP &amp; PRIVACY</h3>
+            <a data-shell-key="faq" href="faq.html">FAQ</a><a data-shell-key="references" href="references.html">References</a><a data-shell-key="privacy" href="privacy-policy.html">Privacy &amp; Policy</a><a data-shell-key="terms" href="privacy-policy.html#terms-of-service">Terms of Service</a><a data-shell-key="news" href="earthquake-news.html">Earthquake News</a><a data-shell-key="contact" href="contact.html">Contact Us</a><a data-shell-key="map" href="earthquake-map.html">Earthquake Impact Map</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Copyright © 2026 QUAKE. All rights reserved. Student educational
+            website developed by the QUAKE Development Team.</span><span data-shell-key="motto">LEARN · PREPARE · TAKE ACTION</span>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
